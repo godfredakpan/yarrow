@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useLocation, useSearchParams, Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
-import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -215,8 +216,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Phone</p>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">
-                      +1 (234) 567-890
+                    <a href="tel:+2348000000000" className="text-muted-foreground hover:text-primary">
+                      +234 800 000 0000
                     </a>
                   </div>
                 </div>
@@ -228,8 +229,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium mb-1">Location</p>
                     <p className="text-muted-foreground">
-                      123 Health Avenue<br />
-                      City, State 12345
+                      Abuja, Nigeria
                     </p>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ const Contact = () => {
                   className="w-full"
                   onClick={handleWhatsAppClick}
                 >
-                  <MessageCircle className="mr-2 h-4 w-4" />
+                  <WhatsAppIcon size={20} className="mr-2 text-[#25D366]" />
                   Chat on WhatsApp
                 </Button>
               </div>
@@ -298,7 +298,7 @@ const Contact = () => {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+1 (234) 567-890"
+                        placeholder="+234 800 000 0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       />

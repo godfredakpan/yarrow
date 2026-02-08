@@ -109,11 +109,11 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
-                <span>+1 (234) 567-890</span>
+                <span>+234 800 000 0000</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
-                <span>123 Health Avenue, City</span>
+                <span>Abuja, Nigeria</span>
               </li>
             </ul>
           </div>

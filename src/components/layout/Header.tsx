@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Search, MessageCircle } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -159,7 +160,7 @@ export function Header() {
               )}
             </div>
             <Button variant="ghost" size="sm" onClick={handleWhatsAppClick} className="gap-2 h-9 text-muted-foreground hover:text-foreground">
-              <MessageCircle className="h-4 w-4" />
+              <WhatsAppIcon size={20} className="text-[#25D366]" />
               Chat
             </Button>
             <Button asChild size="sm" className="h-9 bg-primary hover:bg-primary/90">
@@ -169,7 +170,7 @@ export function Header() {
 
           <div className="flex lg:hidden items-center gap-1">
             <Button variant="ghost" size="icon" className="h-10 w-10" onClick={handleWhatsAppClick}>
-              <MessageCircle className="h-5 w-5" />
+              <WhatsAppIcon size={24} className="text-[#25D366]" />
             </Button>
             <Button
               variant="ghost"
