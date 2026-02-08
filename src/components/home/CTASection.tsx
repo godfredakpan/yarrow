@@ -46,7 +46,7 @@ export function CTASection() {
           style={isInView ? { transitionDelay: "150ms" } : undefined}
         >
           <img
-            src={images.cta}
+            src={images.consultation}
             alt="Consultation – supportive care"
             className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto lg:min-h-[280px]"
             width={800}

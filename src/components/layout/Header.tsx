@@ -75,7 +75,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-[4.25rem]">
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="/assets/Full Logo/SVG/Yarrow Logo - Dark.svg"
+              src="/assets/FullLogo/SVG/YarrowLogo-Dark.svg"
               alt="Yarrow"
               className="h-9 w-auto sm:h-10"
               width={140}

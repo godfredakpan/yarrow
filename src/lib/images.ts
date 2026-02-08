@@ -19,7 +19,8 @@ export const images = {
   cta: w(`${PICSUM}/cta-consult`, 800, 450),
   /** Page banners (full-bleed hero) */
   bannerAbout: w(`${PICSUM}/banner-about`, 1920, 720),
-  bannerContact: w(`${PICSUM}/banner-contact`, 1920, 720),
+  bannerContact: "/images/consultation.jpeg",
+  consultation: "/images/consultation.jpeg",
   bannerPrograms: w(`${PICSUM}/banner-programs`, 1920, 720),
   bannerEvents: w(`${PICSUM}/banner-events`, 1920, 720),
 } as const;

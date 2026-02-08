@@ -37,7 +37,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-3 mb-6">
               <img
-                src="/assets/Full Logo/SVG/Yarrow Logo - Light.svg"
+                src="/assets/FullLogo/SVG/YarrowLogo-Light.svg"
                 alt="Yarrow"
                 className="h-9 w-auto"
                 width={140}

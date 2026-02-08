@@ -254,7 +254,17 @@ const Contact = () => {
 
             {/* Consultation Form */}
             <div className="lg:col-span-2">
-              <div className="bg-card rounded-lg p-8 border border-border">
+              <div className="bg-card rounded-lg overflow-hidden border border-border">
+                <div className="aspect-[21/9] w-full overflow-hidden bg-muted">
+                  <img
+                    src={images.consultation}
+                    alt=""
+                    className="w-full h-full object-cover"
+                    width={800}
+                    height={343}
+                  />
+                </div>
+                <div className="p-8">
                 <h2 className="font-display text-2xl mb-2">
                   {eventIdValid ? `Register for ${eventTitle}` : "Book a free consultation"}
                 </h2>
@@ -380,6 +390,7 @@ const Contact = () => {
                     All consultations are 100% free and confidential.
                   </p>
                 </form>
+                </div>
               </div>
             </div>
           </div>

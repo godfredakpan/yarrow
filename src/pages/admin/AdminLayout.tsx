@@ -34,7 +34,7 @@ const AdminLayout = () => {
           className="flex items-center gap-2 text-primary font-semibold hover:opacity-90"
         >
           <img
-            src="/assets/Full Logo/SVG/Yarrow Logo - Dark.svg"
+            src="/assets/FullLogo/SVG/YarrowLogo-Dark.svg"
             alt="Yarrow"
             className="h-6 w-auto"
             width={100}
