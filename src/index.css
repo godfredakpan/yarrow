@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Yarrow – Mini Brand Guide (Feb 2026)
+   Primary: Yarrow Mint #86A03B
+   Dark Olive #1B2400, Moss Green #5B6F1F, Soft Sage #EAEDDF
+   Coral Pink #F69A85, Charcoal #1C1C1C (text)
+   Typography: Golos Text (headlines and text)
+*/
+
+@layer base {
+  :root {
+    /* Yarrow Mint – primary */
+    --primary: 78 46% 43%;
+    --primary-foreground: 0 0% 100%;
+    /* Moss Green – secondary */
+    --secondary: 76 56% 28%;
+    --secondary-foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    /* Charcoal – text */
+    --foreground: 0 0% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+    /* Soft Sage – muted / background tint */
+    --muted: 72 24% 91%;
+    --muted-foreground: 0 0% 35%;
+    --accent: 72 24% 94%;
+    --accent-foreground: 76 56% 28%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 72 15% 88%;
+    --input: 72 15% 88%;
+    --ring: 78 46% 43%;
+    --radius: 0.5rem;
+    --sidebar-background: 72 24% 97%;
+    --sidebar-foreground: 0 0% 11%;
+    --sidebar-primary: 78 46% 43%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 72 24% 94%;
+    --sidebar-accent-foreground: 0 0% 11%;
+    --sidebar-border: 72 15% 88%;
+    --sidebar-ring: 78 46% 43%;
+    --success: 76 56% 28%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 48%;
+    --warning-foreground: 0 0% 100%;
+    --teen: 330 55% 48%;
+    --teen-foreground: 0 0% 100%;
+    --young: 78 46% 43%;
+    --young-foreground: 0 0% 100%;
+    --peri: 275 42% 48%;
+    --peri-foreground: 0 0% 100%;
+    --senior: 76 56% 28%;
+    --senior-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --primary: 78 45% 50%;
+    --primary-foreground: 72 100% 7%;
+    --secondary: 76 50% 35%;
+    --secondary-foreground: 0 0% 100%;
+    --background: 72 100% 5%;
+    --foreground: 72 24% 91%;
+    --card: 72 30% 10%;
+    --card-foreground: 72 24% 91%;
+    --popover: 72 30% 10%;
+    --popover-foreground: 72 24% 91%;
+    --muted: 72 25% 16%;
+    --muted-foreground: 72 15% 65%;
+    --accent: 76 40% 20%;
+    --accent-foreground: 78 45% 65%;
+    --border: 72 20% 22%;
+    --input: 72 20% 22%;
+    --ring: 78 45% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Golos Text", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Golos Text", system-ui, sans-serif;
+    @apply font-semibold tracking-tight text-foreground;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-[3.25rem] leading-[1.15];
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-[1.65];
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-journal {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:border-primary/30;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-[width] after:duration-200 hover:after:w-full;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-dots-subtle {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold tracking-[0.15em] uppercase text-primary mb-3;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
