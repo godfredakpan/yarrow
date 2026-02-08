@@ -40,17 +40,17 @@ export function CTASection() {
           </Button>
         </div>
         <div
-          className={`relative rounded-lg overflow-hidden border border-primary-foreground/20 shadow-xl transition-all duration-700 ${
+          className={`relative rounded-lg overflow-hidden border border-primary-foreground/20 shadow-xl transition-all duration-700 max-w-md ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
           style={isInView ? { transitionDelay: "150ms" } : undefined}
         >
           <img
             src={images.consultation}
-            alt="Consultation – supportive care"
-            className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto lg:min-h-[280px]"
-            width={800}
-            height={600}
+            alt="Sebastian Schuster on Unsplash"
+            className="w-full h-full object-cover aspect-[4/3] max-h-[200px] sm:max-h-[240px]"
+            width={600}
+            height={450}
           />
         </div>
       </div>
