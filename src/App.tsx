@@ -16,6 +16,8 @@ import EventDetail from "./pages/EventDetail";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import Info from "./pages/Info";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -54,6 +56,8 @@ const App = () => (
             <Route path="/search" element={<Search />} />
             <Route path="/info" element={<Info />} />
             <Route path="/info/:slug" element={<Info />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route
               path="/admin"
