@@ -15,8 +15,9 @@ export function HeroSection() {
       {/* Full-bleed background image */}
       <div className="absolute inset-0">
         <img
-          src={'/images/smiling-black-women.jpeg'}
-          alt="Photo by RICKEY HUTCHINSON on Unsplash"
+          src={images.heroBanner}
+          alt="Five women smiling together, celebrating community and wellbeing. Photo by Kaeme on Unsplash."
+          title="Photo by Kaeme on Unsplash"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}

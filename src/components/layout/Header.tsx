@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { SidebarMenuIcon } from "@/components/icons/SidebarMenuIcon";
+import { useHomeSidebar } from "@/contexts/HomeSidebarContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -10,6 +12,7 @@ const navLinks = [
   { name: "About", path: "/about" },
   { name: "Programs", path: "/programs" },
   { name: "Events", path: "/events" },
+  { name: "Info", path: "/info/what-is-a-period" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -23,7 +26,10 @@ export function Header() {
   const searchPanelRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const isActive = (path: string) => location.pathname === path;
+  const homeSidebar = useHomeSidebar();
+  const isHome = location.pathname === "/";
+  const isActive = (path: string) =>
+    location.pathname === path || (path.startsWith("/info") && location.pathname.startsWith("/info"));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -84,7 +90,8 @@ export function Header() {
             {/* <span className="font-display font-bold text-foreground text-lg sm:hidden">Yarrow</span> */}
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
+            <nav className="flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -99,6 +106,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
+          </div>
 
           <div className="hidden lg:flex items-center gap-2">
             <div className="relative" ref={searchPanelRef}>
@@ -166,6 +174,23 @@ export function Header() {
             <Button asChild size="sm" className="h-9 bg-primary hover:bg-primary/90">
               <Link to="/contact">Book consultation</Link>
             </Button>
+            {isHome && homeSidebar && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                className="h-9 w-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-primary/5 shrink-0"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  homeSidebar.toggle();
+                }}
+                aria-label="Open health topics"
+                aria-expanded={homeSidebar.isOpen}
+              >
+                <SidebarMenuIcon className="h-5 w-5" />
+              </Button>
+            )}
           </div>
 
           <div className="flex lg:hidden items-center gap-1">
@@ -181,6 +206,23 @@ export function Header() {
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
+            {isHome && homeSidebar && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                className="h-10 w-10 shrink-0 text-muted-foreground hover:text-foreground"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  homeSidebar.toggle();
+                }}
+                aria-label="Open health topics"
+                aria-expanded={homeSidebar.isOpen}
+              >
+                <SidebarMenuIcon className="h-6 w-6" />
+              </Button>
+            )}
           </div>
         </div>
 

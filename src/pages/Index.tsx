@@ -6,8 +6,12 @@ import { AgeQuiz } from "@/components/home/AgeQuiz";
 import { DidYouKnow } from "@/components/home/DidYouKnow";
 import { EventsPreview } from "@/components/home/EventsPreview";
 import { CTASection } from "@/components/home/CTASection";
+import { useHomeSidebar } from "@/contexts/HomeSidebarContext";
+import { HomeSidebarPanel } from "@/components/home/HomeSidebarPanel";
 
 const Index = () => {
+  const homeSidebar = useHomeSidebar();
+
   return (
     <Layout>
       <HeroSection />
@@ -17,6 +21,8 @@ const Index = () => {
       <DidYouKnow />
       <EventsPreview />
       <CTASection />
+
+      {homeSidebar && <HomeSidebarPanel sidebar={homeSidebar} />}
     </Layout>
   );
 };

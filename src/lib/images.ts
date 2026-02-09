@@ -7,7 +7,7 @@ const w = (path: string, width: number, height?: number) =>
 
 const PICSUM = "https://picsum.photos/seed";
 export const images = {
-  heroBanner: w(`${PICSUM}/herhealth-hero`, 1200, 700),
+  heroBanner: "/images/home-header.jpeg",
   pathwayTeen: w(`${PICSUM}/pathway-teen`, 600, 400),
   pathwayYoung: w(`${PICSUM}/pathway-young`, 600, 400),
   pathwayPeri: w(`${PICSUM}/pathway-peri`, 600, 400),
