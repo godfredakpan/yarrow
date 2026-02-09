@@ -6,18 +6,20 @@ const footerSections = {
     title: "Explore",
     links: [
       { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
       { name: "Programs", path: "/programs" },
       { name: "Events", path: "/events" },
-      { name: "About", path: "/about" },
+      { name: "Info", path: "/info/what-is-a-period" },
+      { name: "Contact", path: "/contact" },
     ],
   },
   resources: {
     title: "Resources",
     links: [
-      { name: "Teen health", path: "/programs#teen" },
-      { name: "Young women", path: "/programs#young" },
-      { name: "Perimenopause", path: "/programs#peri" },
-      { name: "Women 50+", path: "/programs#senior" },
+      { name: "Teen health", path: "/programs/teen" },
+      { name: "Young women", path: "/programs/young" },
+      { name: "Perimenopause", path: "/programs/peri" },
+      { name: "Women 50+", path: "/programs/senior" },
     ],
   },
   connect: {
