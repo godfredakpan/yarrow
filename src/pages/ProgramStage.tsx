@@ -47,7 +47,6 @@ const ProgramStagePage = () => {
                 <h1 className="font-display text-3xl md:text-4xl text-primary-foreground drop-shadow-sm">
                   {stage.title}
                 </h1>
-                <p className="text-primary-foreground/90 text-lg">{stage.age}</p>
               </div>
             </div>
           </div>

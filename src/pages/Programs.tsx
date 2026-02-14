@@ -12,7 +12,7 @@ const Programs = () => {
       <PageBanner
         eyebrow="Sections"
         title="Programmes"
-        description="Tailored health education and support for every stage of a woman's life. Find the programme designed for you."
+        description="See what we offer — pick a topic, explore resources, and take the next step. All free, evidence-based, and here for you."
         image={images.bannerPrograms}
       />
 
@@ -62,7 +62,6 @@ const Programs = () => {
                       />
                     </div>
                     <h2 className="font-display text-xl mb-1">{stage.title}</h2>
-                    <p className="text-muted-foreground text-sm mb-3">{stage.age}</p>
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
                       {stage.description}
                     </p>
@@ -81,14 +80,13 @@ const Programs = () => {
       {/* CTA */}
       <section className="section-padding bg-muted/50">
         <div className="container-narrow text-center">
-          <h2 className="font-display mb-4">Not sure which programme fits you?</h2>
+          <h2 className="font-display mb-4">Not sure which programme to choose?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Book a free consultation and our team will help guide you to the
-            right resources for your needs.
+            Get in touch and we’ll point you to the right resources — or just explore and see what fits.
           </p>
           <Button asChild size="lg">
             <Link to="/contact">
-              Get Personalized Guidance
+              Get in touch
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

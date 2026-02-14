@@ -26,15 +26,15 @@ export function EventsPreview() {
           }`}
         >
           <div>
-            <p className="section-eyebrow mb-2">Community</p>
+            <p className="section-eyebrow mb-2">Join us</p>
             <h2 className="font-display text-3xl md:text-4xl mb-2">Upcoming events</h2>
             <p className="text-muted-foreground text-lg max-w-xl">
-              Workshops, webinars, and community events.
+              Workshops, webinars, and community get-togethers — come along and get involved.
             </p>
           </div>
           <Button asChild variant="outline" size="default" className="h-11 px-6 shrink-0 rounded-xl border-2">
             <Link to="/events" className="gap-2">
-              View all events
+              See all events
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
@@ -98,7 +98,7 @@ export function EventsPreview() {
                       )}
                     </div>
                     <span className="inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all">
-                      View details
+                      Find out more
                       <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>

@@ -37,14 +37,6 @@ const TOPIC_LABELS: Record<string, string> = {
   other: "Other",
 };
 
-const AGE_GROUP_LABELS: Record<string, string> = {
-  teen: "Teen (16-19)",
-  young: "Young Adult (20-35)",
-  peri: "Perimenopause (40-50)",
-  senior: "50+",
-  caregiver: "Caregiver/Parent",
-};
-
 const AdminContactRequests = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
@@ -96,7 +88,7 @@ const AdminContactRequests = () => {
                 <TableRow>
                   <TableHead>Name</TableHead>
                   <TableHead>Contact</TableHead>
-                  <TableHead>Age / Topic</TableHead>
+                  <TableHead>Topic</TableHead>
                   <TableHead>Date</TableHead>
                   <TableHead className="w-[80px]"></TableHead>
                 </TableRow>
@@ -124,14 +116,11 @@ const AdminContactRequests = () => {
                       </div>
                     </TableCell>
                     <TableCell className="text-sm text-muted-foreground">
-                      {req.age_group && (
-                        <span>{AGE_GROUP_LABELS[req.age_group] ?? req.age_group}</span>
-                      )}
-                      {req.age_group && req.topic && " · "}
-                      {req.topic && (
+                      {req.topic ? (
                         <span>{TOPIC_LABELS[req.topic] ?? req.topic}</span>
+                      ) : (
+                        "—"
                       )}
-                      {!req.age_group && !req.topic && "—"}
                     </TableCell>
                     <TableCell>
                       <span className="flex items-center gap-1 text-sm text-muted-foreground">
@@ -183,9 +172,6 @@ const AdminContactRequests = () => {
                 )}
               </div>
               <div className="flex gap-4 text-muted-foreground">
-                {selected.age_group && (
-                  <span>Age group: {AGE_GROUP_LABELS[selected.age_group] ?? selected.age_group}</span>
-                )}
                 {selected.topic && (
                   <span>Topic: {TOPIC_LABELS[selected.topic] ?? selected.topic}</span>
                 )}

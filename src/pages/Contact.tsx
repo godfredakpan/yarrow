@@ -41,7 +41,6 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    ageGroup: "",
     topic: "",
     message: "",
   });
@@ -123,7 +122,6 @@ const Contact = () => {
         name: formData.name.trim(),
         email: formData.email.trim(),
         phone: formData.phone.trim() || undefined,
-        age_group: formData.ageGroup || undefined,
         topic: formData.topic || undefined,
         message: formData.message.trim() || undefined,
       });
@@ -304,27 +302,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    {!eventIdValid && (
-                      <div className="space-y-2">
-                        <Label htmlFor="ageGroup">Age Group</Label>
-                        <Select
-                          value={formData.ageGroup}
-                          onValueChange={(value) => setFormData({ ...formData, ageGroup: value })}
-                        >
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select age group" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="teen">Teen (16-19)</SelectItem>
-                            <SelectItem value="young">Young Adult (20-35)</SelectItem>
-                            <SelectItem value="peri">Perimenopause (40-50)</SelectItem>
-                            <SelectItem value="senior">50+</SelectItem>
-                            <SelectItem value="caregiver">Caregiver/Parent</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    )}
-                  </div>
+                    </div>
 
                   {!eventIdValid && (
                     <div className="space-y-2">

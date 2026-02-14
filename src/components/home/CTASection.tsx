@@ -20,13 +20,13 @@ export function CTASection() {
           }`}
         >
           <p className="font-display text-xs font-semibold tracking-[0.15em] uppercase text-primary-foreground/80 mb-3">
-            Free support
+            We’re here for you
           </p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] mb-4 text-primary-foreground leading-tight">
-            Book a free consultation
+            Ready to take the next step?
           </h2>
           <p className="text-primary-foreground/90 text-lg mb-8 leading-relaxed max-w-lg">
-            Talk to our team in confidence. Free, non-judgmental support — online or in person.
+            Free, confidential chat with our team — no judgement, just support. Online or in person.
           </p>
           <Button
             asChild
@@ -34,7 +34,7 @@ export function CTASection() {
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/95 h-12 px-8 font-semibold rounded-md"
           >
             <Link to="/contact" className="gap-2">
-              Request a consultation
+              Get in touch
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>

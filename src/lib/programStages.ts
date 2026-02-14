@@ -1,21 +1,22 @@
 /**
- * Life stage programmes – shared by homepage AgePathways and individual programme pages.
+ * Topic-based programmes – shared by homepage pathways and programme pages.
+ * No age ranges; topics are for everyone.
  * Images are in public/images/.
  */
 import type { LucideIcon } from "lucide-react";
 import { GraduationCap, Heart, Flower2, Sun, Droplets, Users, Sparkles, ThermometerSun, Brain, Stethoscope, UsersRound } from "lucide-react";
 
-export type StageId = "teen" | "young" | "peri" | "senior";
+export type StageId = "foundations" | "reproductive" | "hormonal" | "wellness";
 
 export interface ProgramStage {
   id: StageId;
   title: string;
-  age: string;
   description: string;
   /** Full description for the individual page */
   descriptionLong: string;
   /** Image path under public/ (e.g. /images/teenimages.jpeg) */
   image: string;
+  /** Theme color key for UI (tailwind: teen, young, peri, senior) */
   color: "teen" | "young" | "peri" | "senior";
   icon: LucideIcon;
   /** Optional small icons for homepage cards */
@@ -27,14 +28,13 @@ const IMG = "/images";
 
 export const programStages: ProgramStage[] = [
   {
-    id: "teen",
-    title: "Teen Girls",
-    age: "16–19",
+    id: "foundations",
+    title: "Puberty & periods",
     extraIcons: [Droplets, Users, Sparkles],
     description:
-      "Getting to know your body is the first step in your health journey. Explore contraception options, learn about puberty, and find tips to stay healthy and confident.",
+      "Understanding your body, menstrual health, and first steps. Resources on puberty, periods, contraception basics, and building healthy habits.",
     descriptionLong:
-      "Getting to know your body is the first step in your health journey. Our teen programme provides age-appropriate education and support so you can make informed choices.",
+      "Whether you’re new to periods or want clear, reliable information, this programme covers the foundations: puberty and body changes, menstrual health and hygiene, contraception basics, and tips for staying well and confident.",
     image: `${IMG}/teenimages.jpeg`,
     color: "teen",
     icon: GraduationCap,
@@ -48,13 +48,12 @@ export const programStages: ProgramStage[] = [
     ],
   },
   {
-    id: "young",
-    title: "Young Women",
-    age: "20–35",
+    id: "reproductive",
+    title: "Reproductive health & fertility",
     description:
-      "Thinking about starting a family or managing conditions like PCOS? Discover effective options, fertility info, and how to team up with our health care provider.",
+      "Family planning, fertility awareness, and managing conditions like PCOS or endometriosis. Compare contraceptive options and preconception health.",
     descriptionLong:
-      "Thinking about starting a family or managing health conditions? Our young women's programme offers comprehensive support for this dynamic life stage.",
+      "Focused on reproductive health for anyone who wants it: fertility awareness, family planning, managing conditions like PCOS and endometriosis, comparing contraceptive options, and preconception health. No age limits — just evidence-based support.",
     image: `${IMG}/youngwomen.jpeg`,
     color: "young",
     icon: Heart,
@@ -68,14 +67,13 @@ export const programStages: ProgramStage[] = [
     ],
   },
   {
-    id: "peri",
-    title: "Perimenopausal Women",
-    age: "40–50",
+    id: "hormonal",
+    title: "Hormonal changes & perimenopause",
     extraIcons: [ThermometerSun, Brain, Stethoscope],
     description:
-      "Transitioning through hormonal changes? Find tips on managing hot flashes, mood swings, and maintaining energy levels with lifestyle and medical guidance.",
+      "Understanding and managing hormonal changes, hot flashes, mood, sleep, and perimenopause. HRT, lifestyle, and community support.",
     descriptionLong:
-      "Transitioning through hormonal changes can be challenging. Our perimenopause programme provides guidance and community support to help you thrive.",
+      "Hormonal changes can affect anyone. This programme covers perimenopause and menopause: understanding the changes, managing hot flashes and night sweats, mood and sleep, bone health, HRT and alternatives, and lifestyle support.",
     image: `${IMG}/perimenopause.jpeg`,
     color: "peri",
     icon: Flower2,
@@ -89,14 +87,13 @@ export const programStages: ProgramStage[] = [
     ],
   },
   {
-    id: "senior",
-    title: "Women 50+",
-    age: "50+",
+    id: "wellness",
+    title: "Long-term wellness",
     extraIcons: [UsersRound],
     description:
-      "Staying strong and healthy after menopause. Learn about bone health, screenings, and ways to stay energized and active.",
+      "Bone health, heart health, cancer screening, and staying active. Resources for vitality and community support.",
     descriptionLong:
-      "Staying strong and healthy after menopause. Our 50+ programme focuses on maintaining vitality and enjoying this new chapter of life.",
+      "Staying strong and healthy over the long term. This programme focuses on bone health and osteoporosis prevention, heart health, cancer screening guidelines, staying active and energised, and community and peer support — for everyone.",
     image: `${IMG}/elderly.jpg`,
     color: "senior",
     icon: Sun,
@@ -105,7 +102,7 @@ export const programStages: ProgramStage[] = [
       "Bone density and osteoporosis prevention",
       "Heart health awareness",
       "Cancer screening guidelines",
-      "Staying active and energized",
+      "Staying active and energised",
       "Community and peer support",
     ],
   },

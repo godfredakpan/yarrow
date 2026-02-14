@@ -23,17 +23,17 @@ export function DidYouKnow() {
           }`}
         >
           <div>
-            <p className="section-eyebrow mb-2">Evidence-based</p>
+            <p className="section-eyebrow mb-2">Learn something new</p>
             <h2 className="font-display text-3xl md:text-4xl mb-2">Did you know?</h2>
             <p className="text-muted-foreground text-lg max-w-xl">
-              Facts to help you understand your health.
+              Bite-sized facts to help you understand your health — swipe through and get curious.
             </p>
           </div>
           <Link
             to="/programs"
             className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all shrink-0"
           >
-            All resources
+            Explore all resources
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

@@ -14,19 +14,19 @@ const footerSections = {
     ],
   },
   resources: {
-    title: "Resources",
+    title: "Programmes",
     links: [
-      { name: "Teen health", path: "/programs/teen" },
-      { name: "Young women", path: "/programs/young" },
-      { name: "Perimenopause", path: "/programs/peri" },
-      { name: "Women 50+", path: "/programs/senior" },
+      { name: "Puberty & periods", path: "/programs/foundations" },
+      { name: "Reproductive health & fertility", path: "/programs/reproductive" },
+      { name: "Hormonal changes & perimenopause", path: "/programs/hormonal" },
+      { name: "Long-term wellness", path: "/programs/wellness" },
     ],
   },
   connect: {
     title: "Connect",
     links: [
       { name: "Contact", path: "/contact" },
-      { name: "Book consultation", path: "/contact" },
+      { name: "Get started", path: "/contact" },
     ],
   },
 };
@@ -47,7 +47,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-primary-foreground/85 text-sm leading-relaxed max-w-sm mb-6">
-              Healing and care, rooted in nature. Women&apos;s health at every stage of life.
+              Healing and care, rooted in nature. Women&apos;s health, for everyone.
             </p>
             <p className="text-sm text-primary-foreground/70 font-medium">Soft yet powerful. Future forward.</p>
           </div>

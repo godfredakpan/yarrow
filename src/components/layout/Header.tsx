@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
-import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { SidebarMenuIcon } from "@/components/icons/SidebarMenuIcon";
 import { useHomeSidebar } from "@/contexts/HomeSidebarContext";
 import { Button } from "@/components/ui/button";
@@ -15,8 +14,6 @@ const navLinks = [
   { name: "Info", path: "/info/what-is-a-period" },
   { name: "Contact", path: "/contact" },
 ];
-
-const WHATSAPP_NUMBER = "1234567890";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,11 +61,6 @@ export function Header() {
       setIsSearchOpen(false);
       setIsMenuOpen(false);
     }
-  };
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hello, I'd like to learn more about Yarrow.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 
   return (
@@ -167,12 +159,8 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Button variant="ghost" size="sm" onClick={handleWhatsAppClick} className="gap-2 h-9 text-muted-foreground hover:text-foreground">
-              <WhatsAppIcon size={20} className="text-[#25D366]" />
-              Chat
-            </Button>
             <Button asChild size="sm" className="h-9 bg-primary hover:bg-primary/90">
-              <Link to="/contact">Book consultation</Link>
+              <Link to="/contact">Get started</Link>
             </Button>
             {isHome && homeSidebar && (
               <Button
@@ -194,9 +182,6 @@ export function Header() {
           </div>
 
           <div className="flex lg:hidden items-center gap-1">
-            <Button variant="ghost" size="icon" className="h-10 w-10" onClick={handleWhatsAppClick}>
-              <WhatsAppIcon size={24} className="text-[#25D366]" />
-            </Button>
             <Button
               variant="ghost"
               size="icon"
@@ -266,7 +251,7 @@ export function Header() {
               <div className="px-4 pt-4 mt-2 border-t border-border">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                    Book consultation
+                    Get started
                   </Link>
                 </Button>
               </div>

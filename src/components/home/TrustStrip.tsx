@@ -4,17 +4,17 @@ const items = [
   {
     icon: Shield,
     label: "Trusted information",
-    description: "Evidence-based resources at every stage.",
+    description: "Evidence-based resources you can rely on.",
   },
   {
     icon: MessageCircle,
     label: "Free consultations",
-    description: "Confidential support when you need it.",
+    description: "Confidential support — no judgement, just care.",
   },
   {
     icon: Heart,
-    label: "For every age",
-    description: "From teens to women 50+.",
+    label: "Here for you",
+    description: "Programmes and support for whatever matters to you.",
   },
 ];
 
