@@ -11,8 +11,8 @@ const Programs = () => {
     <Layout>
       <PageBanner
         eyebrow="Sections"
-        title="Programmes"
-        description="See what we offer — pick a topic, explore resources, and take the next step. All free, evidence-based, and here for you."
+        title="Journey Guides"
+        description="Start your care path"
         image={images.bannerPrograms}
       />
 

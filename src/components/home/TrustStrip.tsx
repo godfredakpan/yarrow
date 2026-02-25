@@ -14,7 +14,7 @@ const items = [
   {
     icon: Heart,
     label: "Here for you",
-    description: "Programmes and support for whatever matters to you.",
+    description: "Journey Guides and support for whatever matters to you.",
   },
 ];
 

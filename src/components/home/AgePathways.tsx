@@ -16,7 +16,7 @@ export function AgePathways() {
         >
           <p className="section-eyebrow mb-3">What we offer</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] mb-4 leading-tight">
-            Programmes that meet you where you are
+            Journey Guides that meet you where you are
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Pick a topic that interests you — evidence-based, no age limits. Dive in and see what fits.

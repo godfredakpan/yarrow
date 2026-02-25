@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, BookOpen } from "lucide-react";
 import { SidebarMenuIcon } from "@/components/icons/SidebarMenuIcon";
 import { useHomeSidebar } from "@/contexts/HomeSidebarContext";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Programs", path: "/programs" },
+  { name: "Journey Guides", path: "/programs" },
   { name: "Events", path: "/events" },
   { name: "Info", path: "/info/what-is-a-period" },
   { name: "Contact", path: "/contact" },
@@ -73,7 +73,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-[4.25rem]">
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="/assets/FullLogo/SVG/YarrowLogo-Dark.svg"
+              src="/assets/FullLogo/SVG/YarrowLogo.svg"
               alt="Yarrow"
               className="h-9 w-auto sm:h-10"
               width={140}
@@ -128,7 +128,7 @@ export function Header() {
                         <Input
                           id="header-search"
                           type="search"
-                          placeholder="Programmes, events, topics…"
+                          placeholder="Journey Guides, events, topics…"
                           className="pl-9 h-11 rounded-lg border-border bg-background focus-visible:ring-2 focus-visible:ring-primary"
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
@@ -159,9 +159,9 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Button asChild size="sm" className="h-9 bg-primary hover:bg-primary/90">
-              <Link to="/contact">Get started</Link>
-            </Button>
+            {/* <Button asChild size="sm" className="h-9 bg-primary hover:bg-primary/90">
+              <Link to="/programs">Get started</Link>
+            </Button> */}
             {isHome && homeSidebar && (
               <Button
                 type="button"
@@ -205,7 +205,7 @@ export function Header() {
                 aria-label="Open health topics"
                 aria-expanded={homeSidebar.isOpen}
               >
-                <SidebarMenuIcon className="h-6 w-6" />
+                <BookOpen className="h-5 w-5" />
               </Button>
             )}
           </div>
@@ -223,7 +223,7 @@ export function Header() {
                   <Input
                     id="mobile-search"
                     type="search"
-                    placeholder="Programmes, events, topics…"
+                    placeholder="Journey Guides, events, topics…"
                     className="pl-9 h-11 rounded-lg border-border bg-background"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}

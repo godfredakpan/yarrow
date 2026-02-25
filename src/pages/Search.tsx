@@ -66,7 +66,7 @@ const Search = () => {
           {/* Prominent search box */}
           <form onSubmit={handleSubmit} className="mb-10">
             <label htmlFor="search-page-input" className="sr-only">
-              Search programmes, events, and topics
+              Search journey guides, events, and topics
             </label>
             <div className="relative flex flex-col sm:flex-row gap-3">
               <div className="relative flex-1">
@@ -74,7 +74,7 @@ const Search = () => {
                 <Input
                   id="search-page-input"
                   type="search"
-                  placeholder="Programmes, events, topics…"
+                  placeholder="Journey Guides, events, topics…"
                   className="w-full pl-12 h-14 text-base rounded-xl border-border bg-card focus-visible:ring-2 focus-visible:ring-primary shadow-sm"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}

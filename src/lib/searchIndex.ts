@@ -27,7 +27,7 @@ export const searchIndex: SearchItem[] = [
     keywords: ["about", "mission", "values"],
   },
   {
-    title: "Programmes",
+    title: "Journey Guides",
     path: "/programs",
     snippet: "Topic-based programmes and resources.",
     category: "Page",

@@ -36,50 +36,39 @@ const About = () => {
         image={images.bannerAbout}
       />
 
-      {/* Mission */}
+      {/* About Yarrow copy */}
       <section className="section-padding">
-        <div className="container-journal">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-display mb-6">Our mission</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Our mission is to empower women with knowledge, resources, and 
-                support to take control of their health. We believe that every 
-                woman deserves access to accurate health information, regardless 
-                of her background or circumstances.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Through education, free consultations, and community programs, 
-                we aim to break down barriers to healthcare access and create a 
-                supportive environment where women can openly discuss their health concerns.
-              </p>
-            </div>
-            <div className="bg-card rounded-lg p-8 border border-border">
-              <h3 className="text-xl font-semibold mb-4">What We Do</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Provide free health consultations online and in-person</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Host educational workshops and community events</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Create age-appropriate health resources and guides</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Connect women with healthcare professionals</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                  <span>Advocate for better women's healthcare policies</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="container-journal max-w-3xl">
+          <h2 className="font-display mb-6">About Yarrow</h2>
+          <p className="text-lg text-muted-foreground mb-4">
+            Yarrow was created to address the gaps that continue to exist in women’s healthcare.
+          </p>
+          <p className="text-lg text-muted-foreground mb-4">
+            Too often, women are left with unanswered questions about their bodies. They struggle to find clear,
+            reliable information on topics like birth control, irregular periods, urinary tract infections, yeast
+            infections, PCOS, endometriosis, hormonal imbalances, and more. Many feel dismissed, unheard, or unsure
+            where to turn for trustworthy guidance.
+          </p>
+          <p className="text-lg text-muted-foreground mb-4">Yarrow bridges that gap.</p>
+          <p className="text-lg text-muted-foreground mb-4">
+            Yarrow gives women access to meaningful, evidence-based information about their health. It creates a safe
+            space to ask questions, learn about their bodies, and better understand symptoms or concerns they may be
+            experiencing.
+          </p>
+          <p className="text-lg text-muted-foreground mb-4">
+            In addition to education, Yarrow provides access to virtual care through telehealth services, making
+            professional support more accessible and convenient. Whether a woman needs guidance, clarification, or next
+            steps, Yarrow connects her to the care she deserves.
+          </p>
+          <p className="text-lg text-muted-foreground mb-3">Our mission is simple:</p>
+          <ul className="list-disc pl-6 space-y-1 text-lg text-muted-foreground mb-4">
+            <li>Empower women with knowledge</li>
+            <li>Provide access to trusted care</li>
+            <li>Close the gaps in women’s healthcare—one informed decision at a time</li>
+          </ul>
+          <p className="text-lg text-muted-foreground">
+            Yarrow exists to help women feel informed, supported, and confident in managing their health.
+          </p>
         </div>
       </section>
 

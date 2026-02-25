@@ -28,7 +28,7 @@ const pathways: {
   },
   {
     id: "reproductive",
-    label: "Reproductive health & fertility",
+    label: "Reproductive health",
     path: "/programs/reproductive",
     icon: Heart,
     color: "text-young",
@@ -167,7 +167,7 @@ export function AgeQuiz() {
               Not sure where to start?
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Answer one quick question and we’ll point you to a programme that’s right for you. No sign-up — just explore.
+              Answer one quick question and we’ll point you to a Journey Guide that’s right for you. No sign-up — just explore.
             </p>
             <Button
               size="lg"
@@ -175,7 +175,7 @@ export function AgeQuiz() {
               className="gap-2 rounded-xl h-12 px-8 text-base font-semibold shadow-md hover:shadow-lg transition-all"
             >
               <Sparkles className="h-5 w-5" />
-              Find my programme
+              Find my Journey Guide
             </Button>
           </div>
         </div>

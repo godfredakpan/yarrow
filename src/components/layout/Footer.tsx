@@ -7,14 +7,14 @@ const footerSections = {
     links: [
       { name: "Home", path: "/" },
       { name: "About", path: "/about" },
-      { name: "Programs", path: "/programs" },
+      { name: "Journey Guides", path: "/programs" },
       { name: "Events", path: "/events" },
       { name: "Info", path: "/info/what-is-a-period" },
       { name: "Contact", path: "/contact" },
     ],
   },
   resources: {
-    title: "Programmes",
+    title: "Journey Guides",
     links: [
       { name: "Puberty & periods", path: "/programs/foundations" },
       { name: "Reproductive health & fertility", path: "/programs/reproductive" },
@@ -26,7 +26,7 @@ const footerSections = {
     title: "Connect",
     links: [
       { name: "Contact", path: "/contact" },
-      { name: "Get started", path: "/contact" },
+      { name: "Get started", path: "/programs" },
     ],
   },
 };
@@ -39,7 +39,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-3 mb-6">
               <img
-                src="/assets/FullLogo/SVG/YarrowLogo-Light.svg"
+                src="/assets/FullLogo/SVG/YarrowLogo.svg"
                 alt="Yarrow"
                 className="h-9 w-auto"
                 width={140}

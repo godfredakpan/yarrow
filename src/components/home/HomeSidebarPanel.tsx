@@ -70,7 +70,14 @@ function SidebarDetail({ sidebar }: { sidebar: HomeSidebarContextValue }) {
       <div className="pt-6 px-6 pb-6 flex flex-col min-h-0 overflow-y-auto">
         <h2 className="font-display font-semibold text-xl text-foreground mb-4 pr-2">{topic.title}</h2>
         <div className="rounded-xl border border-border bg-muted/20 p-4 mb-6">
-          <p className="text-sm text-muted-foreground leading-relaxed">{topic.summary}</p>
+          {topic.summary
+            .split(/(?<=[.!?])\s+/)
+            .filter((part) => part.trim().length > 0)
+            .map((part, idx) => (
+              <p key={idx} className="text-sm text-muted-foreground leading-relaxed mb-1 last:mb-0">
+                {part.trim()}
+              </p>
+            ))}
         </div>
         <Button asChild className="w-full mt-auto shrink-0 h-11 rounded-xl font-medium gap-2 shadow-sm">
           <Link to={`/info/${slug}`} onClick={sidebar.close}>

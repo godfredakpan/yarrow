@@ -43,8 +43,8 @@ export function HeroSection() {
               size="lg"
               className="mt-6 h-14 px-8 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base border-0 shadow-lg gap-2 [animation-delay:200ms]"
             >
-              <Link to="/contact" className="gap-2">
-                Get started
+              <Link to="/programs" className="gap-2">
+                Health Hubs
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
