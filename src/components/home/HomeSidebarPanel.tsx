@@ -76,6 +76,34 @@ function SidebarDetail({ sidebar }: { sidebar: HomeSidebarContextValue }) {
             .filter((part) => part.trim().length > 0)
             .map((part, idx) => {
               const trimmed = part.trim();
+              // Summary uses single spaces (first100Words), so bullets appear as " • item • item"
+              const bulletSplit = trimmed.split(/\s+•\s+/);
+              if (bulletSplit.length > 1) {
+                const [intro, ...listItems] = bulletSplit;
+                const introTrimmed = intro.trim();
+                return (
+                  <div key={idx} className="mb-1 last:mb-0">
+                    {introTrimmed ? (
+                      <p className="text-sm text-muted-foreground leading-relaxed mb-1">
+                        {introTrimmed.split(/(\*\*[^*]+\*\*)/g).map((bit, i) =>
+                          bit.startsWith("**") && bit.endsWith("**") ? (
+                            <strong key={i} className="font-semibold text-foreground">
+                              {bit.slice(2, -2)}
+                            </strong>
+                          ) : (
+                            <span key={i}>{bit}</span>
+                          )
+                        )}
+                      </p>
+                    ) : null}
+                    <ul className="list-disc pl-5 space-y-0.5 text-sm text-muted-foreground leading-relaxed">
+                      {listItems.map((item, i) => (
+                        <li key={i}>{item.trim()}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              }
               const bits = trimmed.split(/(\*\*[^*]+\*\*)/g);
               return (
                 <p key={idx} className="text-sm text-muted-foreground leading-relaxed mb-1 last:mb-0">
