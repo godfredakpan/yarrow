@@ -15,9 +15,9 @@ function first100Words(text: string): string {
 }
 
 // ─── What Is a Period (from What Is a Period.pdf) ─────────────────────────────
-const whatIsAPeriodFull = `What Is a Period?
+const whatIsAPeriodFull = `
 
-Menstruation, often called a period, is normal vaginal bleeding that happens as part of a girl or woman's monthly cycle. The beginning of a period marks the start of a young girl's menstrual journey and is often seen as an important step in growing up.
+**Menstruation**, often called a period, is normal vaginal bleeding that happens as part of a girl or woman's monthly cycle. The beginning of a period marks the start of a young girl's menstrual journey and is often seen as an important step in growing up.
 
 Every month, the body prepares for pregnancy. If pregnancy does not happen, the womb (uterus) sheds its lining. This lining leaves the body as menstrual blood, which is made up of blood and tissue from inside the uterus.
 
@@ -54,7 +54,7 @@ Periods are a natural and healthy part of life. They should not stop you from ha
 If you have questions about your period, talk to a doctor, nurse, parent, or trusted family member. You can also send questions to us at care@yarrow.com.`;
 
 // ─── Menstrual Cramps (from Menstrual Cramps.pdf) ───────────────────────────
-const menstrualCrampsFull = `Menstrual cramps, also called dysmenorrhea, are throbbing or cramping pains in the lower abdomen that often occur just before or during a menstrual period. They may also be accompanied by lower back pain, nausea, headaches, or fatigue. Many girls and women experience menstrual cramps at some point in their lives.
+const menstrualCrampsFull = `**Menstrual cramps**, also called dysmenorrhea, are throbbing or cramping pains in the lower abdomen that often occur just before or during a menstrual period. They may also be accompanied by lower back pain, nausea, headaches, or fatigue. Many girls and women experience menstrual cramps at some point in their lives.
 
 For some, the discomfort is mild and manageable. For others, cramps can be severe enough to interfere with daily activities for several days each month.
 
@@ -121,7 +121,7 @@ Always consult a healthcare provider to determine the best treatment option for 
 If you have questions or would like more information, you can contact us at care@yarrow.com.`;
 
 // ─── Menstrual Cups and Discs (from Menstrual Cups and Discs.pdf) ─────────────
-const menstrualCupsAndDiscsFull = `Menstrual Cups and Discs: What to Know
+const menstrualCupsAndDiscsFull = `
 
 Menstrual cups and menstrual discs are reusable period products that collect menstrual blood instead of absorbing it like pads or tampons. They are worn inside the body and can be a comfortable, effective option for many people.
 
@@ -170,15 +170,15 @@ Menstrual cups and discs are just one of many healthy period care options. The b
 For questions or support, contact a trusted healthcare provider or email care@yarrow.com.`;
 
 // ─── PCOS (from PCOS.pdf) ─────────────────────────────────────────────────────
-const pcosFull = `PCOS (Polycystic Ovary Syndrome)
+const pcosFull = `
 
-PCOS is a common hormone condition that affects women during their reproductive years. It happens when the body makes higherthannormal levels of certain hormones called androgens. This can cause irregular periods, acne, weight gain, extra hair growth, and trouble getting pregnant.
+**PCOS(Polycystic Ovary Syndrome)** is a common hormone condition that affects women during their reproductive years. It happens when the body makes higherthannormal levels of certain hormones called androgens. This can cause irregular periods, acne, weight gain, extra hair growth, and trouble getting pregnant.
 
 Even though the name includes the word “cyst,” not everyone with PCOS has ovarian cysts. Doctors diagnose PCOS based on symptoms, blood tests, and sometimes an ultrasound—not cysts alone.
 
 Early diagnosis and care can help lower the risk of longterm health problems, such as type 2 diabetes and heart disease.
 
-Common Symptoms of PCOS
+**Common Symptoms of PCOS**
 
 PCOS symptoms can be different for each person. Some people have only one or two symptoms, while others have many. Common signs include:
 • Irregular or missed periods
@@ -190,7 +190,7 @@ PCOS symptoms can be different for each person. Some people have only one or two
 • Thinning hair on the head
 • Difficulty getting pregnant
 
-What Causes PCOS?
+**What Causes PCOS?**
 
 Doctors don’t know the exact cause, but several things may contribute:
 
@@ -205,113 +205,180 @@ Being overweight can make insulin resistance worse.
 3. Genetics
 PCOS often runs in families. If a parent or sibling has PCOS, the chances of having it are higher.
 
-Treatment and Management
+**Treatment and Management**
 
 Treatment of PCOS can include lifestyle changes, medications or a combination of both
 
-Living With PCOS
+**Living With PCOS**
 
 PCOS is a lifelong condition, but many people manage it well with the right care.
 Regular checkins with a doctor can help prevent complications and support overall health.
 If you think you might have PCOS—or if you have it and want help managing your symptoms—talk with a healthcare professional. You are not alone, and support is available. For more answers, you can contact us at care@yarrow.com.`;
 
 // ─── Contraceptives (from Did you know.pdf — Contraceptives section only) ────
-const contraceptivesFull = `Did You Know? — Contraceptives
+const contraceptivesFull = `
 
-Birth Control Pills
-• Did you know?
-Birth control pills work best when taken at the same time every day. In addition to preventing pregnancy, some pills can also help with lighter periods, more regular cycles, and reduced menstrual cramps.
+**Birth Control Pills**
+• Birth control pills work best when taken at the same time every day. In addition to preventing pregnancy, some pills can also help with lighter periods, more regular cycles, and reduced menstrual cramps.
 
-Birth Control Patch
-• Did you know?
+**Birth Control Patch**
+• 
 The birth control patch is changed once a week, making it a convenient option for people who don't want to remember a daily pill.
 
-Birth Control Ring
-• Did you know?
+**Birth Control Ring**
+• 
 The vaginal ring is placed for three weeks and removed for one week, providing month-long pregnancy protection with minimal routine maintenance.
 
-Hormonal IUD
-• Did you know?
+**Hormonal IUD**
+• 
 A hormonal IUD can work for 3–8 years, depending on the type. Many people experience lighter periods or no periods at all over time.
 
-Copper IUD
-• Did you know?
+**Copper IUD**
+• 
 The copper IUD contains no hormones and can prevent pregnancy for up to 10 years. It can also be used as emergency contraception if placed shortly after sex.
 
-Birth Control Shot
-• Did you know?
+**Birth Control Shot**
+• 
 The birth control shot is given once every three months, making it a low-maintenance option. Some people may notice changes in their menstrual cycle while using it.
-
-Birth Control Implant
-• Did you know?
+ 
+**Birth Control Implant**
+• 
 The implant is a small, flexible rod placed in the upper arm and provides protection for up to 3 years. You don't have to think about contraception daily or monthly.
 
-Condoms
-• Did you know?
+**Condoms**
+• 
 Condoms are the only contraceptive method that helps protect against sexually transmitted infections (STIs) when used correctly.
 
-Emergency Contraception
-• Did you know?
+**Emergency Contraception**
+• 
 Emergency contraception can help prevent pregnancy after unprotected sex and works best when taken as soon as possible.
 
-Choosing the Right Method
-• Did you know?
+**Choosing the Right Method**
+• 
 There is no single "best" birth control option. The right method depends on health needs, lifestyle, comfort, and personal preferences.`;
 
 // ─── Menstrual Product Comparison (from Menstrual Product Comparison Chart.pdf) ─
-const comparisonFull = `Menstrual Product Comparison Chart
+const comparisonFull = `
 
-**How it works**
+**1. How it works**
 
 Pads: Worn outside the body to absorb blood.
+
 Tampons: Inserted into the vagina to absorb blood.
+
 Menstrual Cups: Inserted into the vagina to collect blood.
+
 Menstrual Discs: Inserted to sit at the base of the cervix to collect blood.
 
-**Reusable**
-Pads: No. Tampons: No. Menstrual Cups: Yes (most last several years). Menstrual Discs: Some are reusable; others are disposable.
+**2. Reusable**
 
-**How long it can be worn**
-Pads: 3–6 hours. Tampons: 4–8 hours. Menstrual Cups: Up to 8–12 hours*. Menstrual Discs: Up to 8–12 hours*.
+Pads: No.
+
+Tampons: No.
+
+Menstrual Cups: Yes (most last several years).
+
+Menstrual Discs: Some are reusable; others are disposable.
+
+**3. How long it can be worn**
+
+Pads: 3–6 hours.
+
+Tampons: 4–8 hours.
+
+Menstrual Cups: Up to 8–12 hours*.
+
+Menstrual Discs: Up to 8–12 hours*.
+
 *Always follow the manufacturer's instructions and empty or change products sooner if flow is heavy.
 
-**Best for**
+**4. Best for**
+
 Pads: Beginners, light to heavy flow, overnight.
+
 Tampons: Moderate to heavy flow, sports, swimming.
+
 Menstrual Cups: Longer wear time, sustainability.
+
 Menstrual Discs: Longer wear time, comfort, some people during activity.
 
-**Comfort level**
+**5. Comfort level**
+
 Pads: External; may feel bulky.
+
 Tampons: Internal; may be felt if not placed correctly.
+
 Menstrual Cups: Internal; may take time to get used to.
+
 Menstrual Discs: Internal; sits higher and may feel less noticeable.
 
-**Risk of leaks**
-Pads: Moderate (depends on fit and flow). Tampons: Moderate if full or improperly placed. Menstrual Cups: Low when fitted correctly. Menstrual Discs: Low when positioned correctly.
+**6. Risk of leaks**
 
-**Risk of Toxic Shock Syndrome (TSS)**
-Pads: None. Tampons: Very rare, but possible. Menstrual Cups: Very rare when used correctly. Menstrual Discs: Very rare when used correctly.
+Pads: Moderate (depends on fit and flow).
 
-**Environmental impact**
-Pads: Single-use waste. Tampons: Single-use waste. Menstrual Cups: Low waste (reusable). Menstrual Discs: Low for reusable; moderate for disposable.
+Tampons: Moderate if full or improperly placed.
 
-**Cost over time**
-Pads: Ongoing monthly cost. Tampons: Ongoing monthly cost. Menstrual Cups: Higher upfront, lower long-term cost. Menstrual Discs: Varies by type.
+Menstrual Cups: Low when fitted correctly.
 
-**Learning curve**
-Pads: Very easy. Tampons: Easy to moderate. Menstrual Cups: Moderate. Menstrual Discs: Moderate.
+Menstrual Discs: Low when positioned correctly.
 
-**Good for teens?**
-Pads: Yes. Tampons: Yes (with guidance). Menstrual Cups: Possibly, depending on comfort. Menstrual Discs: Possibly, depending on comfort.
+**7. Risk of Toxic Shock Syndrome (TSS)**
 
-**Key Takeaways**
+Pads: None.
+
+Tampons: Very rare, but possible.
+
+Menstrual Cups: Very rare when used correctly.
+
+Menstrual Discs: Very rare when used correctly.
+
+**8. Environmental impact**
+
+Pads: Single-use waste.
+
+Tampons: Single-use waste.
+
+Menstrual Cups: Low waste (reusable).
+
+Menstrual Discs: Low for reusable; moderate for disposable.
+
+**9. Cost over time**
+
+Pads: Ongoing monthly cost.
+
+Tampons: Ongoing monthly cost.
+
+Menstrual Cups: Higher upfront, lower long-term cost.
+
+Menstrual Discs: Varies by type.
+
+**10. Learning curve**
+
+Pads: Very easy.
+
+Tampons: Easy to moderate.
+
+Menstrual Cups: Moderate.
+
+Menstrual Discs: Moderate.
+
+**11. Good for teens?**
+
+Pads: Yes.
+
+Tampons: Yes (with guidance).
+
+Menstrual Cups: Possibly, depending on comfort.
+
+Menstrual Discs: Possibly, depending on comfort.
+
+**12. Key Takeaways**
 
 • All options are safe and effective when used as directed.
 • There is no "best" product—the right choice depends on comfort, lifestyle, flow, and personal preference.
 • Some people use different products at different times (for example, pads at night and tampons or cups during the day).
 
-**When to Ask for Guidance**
+**13. When to Ask for Guidance**
 
 A healthcare provider can help with:
 • Choosing the right product or size
@@ -321,9 +388,9 @@ A healthcare provider can help with:
 For additional questions or support, contact care@yarrow.com.`;
 
 // ─── Douching (from Douching.pdf) ─────────────────────────────────────────────
-const douchingFull = `Douching
+const douchingFull = `
 
-Douching is the internal cleansing of the vagina using water or mixtures of fluids such as baking soda, iodine, or vinegar. People may douche to remove odors, "feel fresh," cleanse after menstruation, or try to reduce the risk of infection.
+**Douching** is the internal cleansing of the vagina using water or mixtures of fluids such as baking soda, iodine, or vinegar. People may douche to remove odors, "feel fresh," cleanse after menstruation, or try to reduce the risk of infection.
 
 **Why doctors advise against douching**
 
@@ -362,7 +429,7 @@ If you are concerned about vaginal odor, talk to a doctor or nurse. Even healthy
 • Avoid scented tampons, pads, powders, wipes, and sprays. These products may increase your chances of vaginal irritation or infection.`;
 
 // ─── Birth control: Breaking the myth (from Birth Control - Clearing the Myth.pdf) ─
-const birthControlMythFull = `Birth control: Breaking the myth
+const birthControlMythFull = `
 
 There are many common myths surrounding the use of birth control—especially oral contraceptives. These myths often create fear and confusion for women who may benefit from using them. Let's break down some of the most common misconceptions and clarify the facts.
 
@@ -418,9 +485,9 @@ Additionally, birth control is not solely about preventing pregnancy. It is a va
 Every woman's body is different. The best approach is to discuss options with a healthcare provider to determine which method aligns with personal health goals, comfort level, and lifestyle.`;
 
 // ─── Understanding Yeast Infections (from Understanding Yeast Infections.pdf) ────
-const yeastInfectionFull = `Understanding Yeast Infections: A Simple Guide
+const yeastInfectionFull = `
 
-A yeast infection is one of the most common vaginal conditions many people experience at some point in their lives. Although it can be uncomfortable, it is usually easy to recognize and treat. Knowing what causes a yeast infection, how it feels, and what to do when it happens can help you feel more in control of your health.
+**A yeast infection** is one of the most common vaginal conditions many people experience at some point in their lives. Although it can be uncomfortable, it is usually easy to recognize and treat. Knowing what causes a yeast infection, how it feels, and what to do when it happens can help you feel more in control of your health.
 
 **What Exactly Is a Yeast Infection?**
 
@@ -485,12 +552,12 @@ export const healthTopics: HealthTopic[] = [
     summary: first100Words(whatIsAPeriodFull),
     content: whatIsAPeriodFull,
   },
-  {
-    slug: "contraceptives",
-    title: "Contraceptives",
-    summary: first100Words(contraceptivesFull),
-    content: contraceptivesFull,
-  },
+  // {
+  //   slug: "contraceptives",
+  //   title: "Contraceptives",
+  //   summary: first100Words(contraceptivesFull),
+  //   content: contraceptivesFull,
+  // },
   {
     slug: "pcos",
     title: "PCOS (Polycystic Ovary Syndrome)",

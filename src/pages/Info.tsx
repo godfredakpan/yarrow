@@ -3,16 +3,38 @@ import { ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   getTopicBySlug,
   getPrevNextSlug,
   healthTopicSlugs,
+  healthTopics,
 } from "@/lib/healthTopics";
 
-/** Simple render: paragraphs and **bold** */
+/** Render a block that may contain inline **bold** */
+function renderInlineBold(text: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, j) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={j} className="font-semibold text-foreground">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      <span key={j}>{part}</span>
+    )
+  );
+}
+
+/** Simple render: paragraphs, **bold**, and • bullet lists */
 function TopicContent({ content }: { content: string }) {
   const blocks = content.trim().split(/\n\n+/);
   return (
-    <div className="prose prose-lg max-w-none prose-headings:font-display prose-p:text-muted-foreground prose-p:leading-relaxed">
+    <div className="prose prose-lg max-w-none prose-headings:font-display prose-p:text-muted-foreground prose-p:leading-relaxed prose-ul:my-4 prose-li:text-muted-foreground prose-li:leading-relaxed">
       {blocks.map((block, i) => {
         const trimmed = block.trim();
         if (!trimmed) return null;
@@ -23,18 +45,26 @@ function TopicContent({ content }: { content: string }) {
             </h3>
           );
         }
-        const parts = trimmed.split(/(\*\*[^*]+\*\*)/g);
+        const lines = trimmed.split("\n");
+        const bulletStart = lines.findIndex((line) => /^\s*•\s+/.test(line));
+        if (bulletStart >= 0) {
+          const introLines = lines.slice(0, bulletStart).filter((l) => l.trim());
+          const intro = introLines.join(" ").trim();
+          const listItems = lines.slice(bulletStart).filter((line) => /^\s*•\s+/.test(line));
+          return (
+            <div key={i} className="mb-4">
+              {intro ? <p className="mb-2">{renderInlineBold(intro)}</p> : null}
+              <ul className="list-disc pl-6 space-y-1">
+                {listItems.map((line, j) => (
+                  <li key={j}>{renderInlineBold(line.replace(/^\s*•\s*/, "").trim())}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
         return (
           <p key={i} className="mb-4">
-            {parts.map((part, j) =>
-              part.startsWith("**") && part.endsWith("**") ? (
-                <strong key={j} className="font-semibold text-foreground">
-                  {part.slice(2, -2)}
-                </strong>
-              ) : (
-                <span key={j}>{part}</span>
-              )
-            )}
+            {renderInlineBold(trimmed)}
           </p>
         );
       })}
@@ -69,7 +99,7 @@ export default function Info() {
             {topic.title}
           </h1>
 
-          <div className="flex gap-2 mb-10">
+          <div className="flex flex-wrap items-center gap-2 mb-10">
             <Button
               variant="outline"
               size="sm"
@@ -90,6 +120,22 @@ export default function Info() {
               Next
               <ChevronRight className="h-4 w-4" />
             </Button>
+            <span className="text-sm text-muted-foreground mr-1 hidden sm:inline">Other topics:</span>
+            <Select
+              value={slug}
+              onValueChange={(value) => value && navigate(`/info/${value}`)}
+            >
+              <SelectTrigger className="w-[220px] sm:w-[260px] h-9 border-input bg-background" aria-label="Jump to another topic">
+                <SelectValue placeholder="Other topics…" />
+              </SelectTrigger>
+              <SelectContent>
+                {healthTopics.map((t) => (
+                  <SelectItem key={t.slug} value={t.slug}>
+                    {t.title}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <TopicContent content={topic.content} />

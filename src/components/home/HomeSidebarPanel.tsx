@@ -73,11 +73,23 @@ function SidebarDetail({ sidebar }: { sidebar: HomeSidebarContextValue }) {
           {topic.summary
             .split(/(?<=[.!?])\s+/)
             .filter((part) => part.trim().length > 0)
-            .map((part, idx) => (
-              <p key={idx} className="text-sm text-muted-foreground leading-relaxed mb-1 last:mb-0">
-                {part.trim()}
-              </p>
-            ))}
+            .map((part, idx) => {
+              const trimmed = part.trim();
+              const bits = trimmed.split(/(\*\*[^*]+\*\*)/g);
+              return (
+                <p key={idx} className="text-sm text-muted-foreground leading-relaxed mb-1 last:mb-0">
+                  {bits.map((bit, i) =>
+                    bit.startsWith("**") && bit.endsWith("**") ? (
+                      <strong key={i} className="font-semibold text-foreground">
+                        {bit.slice(2, -2)}
+                      </strong>
+                    ) : (
+                      <span key={i}>{bit}</span>
+                    )
+                  )}
+                </p>
+              );
+            })}
         </div>
         <Button asChild className="w-full mt-auto shrink-0 h-11 rounded-xl font-medium gap-2 shadow-sm">
           <Link to={`/info/${slug}`} onClick={sidebar.close}>
