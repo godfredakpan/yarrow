@@ -71,7 +71,8 @@ function SidebarDetail({ sidebar }: { sidebar: HomeSidebarContextValue }) {
         <h2 className="font-display font-semibold text-xl text-foreground mb-4 pr-2">{topic.title}</h2>
         <div className="rounded-xl border border-border bg-muted/20 p-4 mb-6">
           {topic.summary
-            .split(/(?<=[.!?])\s+/)
+            // Split on sentence endings, but not after "1." style numbers so "**1. How it works**" stays one segment
+            .split(/(?<![0-9])\.\s+|\?\s+|\!\s+/)
             .filter((part) => part.trim().length > 0)
             .map((part, idx) => {
               const trimmed = part.trim();
