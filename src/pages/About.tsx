@@ -39,7 +39,7 @@ const About = () => {
       {/* About Yarrow copy */}
       <section className="section-padding">
         <div className="container-journal max-w-3xl">
-          <h2 className="font-display mb-6">About Yarrow</h2>
+          {/* <h2 className="font-display mb-6">About Yarrow</h2> */}
           <p className="text-lg text-muted-foreground mb-4">
             Yarrow was created to address the gaps that continue to exist in women’s healthcare.
           </p>
@@ -60,14 +60,14 @@ const About = () => {
             professional support more accessible and convenient. Whether a woman needs guidance, clarification, or next
             steps, Yarrow connects her to the care she deserves.
           </p> */}
-          <p className="text-lg text-muted-foreground mb-3">Our mission is simple:</p>
+          <h2 className="text-lg text-muted-foreground mb-3 font-display">Our mission is simple:</h2>
           <ul className="list-disc pl-6 space-y-1 text-lg text-muted-foreground mb-4">
             <li>Empower women with knowledge</li>
             <li>Provide access to trusted care</li>
             <li>Close the gaps in women’s healthcare—one informed decision at a time</li>
           </ul>
           {/* vission statement below*/}
-          <p className="text-lg text-muted-foreground mb-3">Our vision statement:</p>
+          <h2 className="text-lg text-muted-foreground mb-3 font-display">Our vision statement:</h2>
           <p className="text-lg text-muted-foreground">
           Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her health. Through accessible education on contraception, reproductive health conditions, and common infections, we aim to empower women to make informed decisions and advocate for their well-being.</p>
         </div>

@@ -172,8 +172,6 @@ For questions or support, contact a trusted healthcare provider or email care@ya
 // ─── PCOS (from PCOS.pdf) ─────────────────────────────────────────────────────
 const pcosFull = `
 
-**PCOS(Polycystic Ovary Syndrome)** 
-
 PCOS is a common hormone condition that affects women during their reproductive years. It happens when the body makes higherthannormal levels of certain hormones called androgens. This can cause irregular periods, acne, weight gain, extra hair growth, and trouble getting pregnant.
 
 Even though the name includes the word “cyst,” not everyone with PCOS has ovarian cysts. Doctors diagnose PCOS based on symptoms, blood tests, and sometimes an ultrasound—not cysts alone.
