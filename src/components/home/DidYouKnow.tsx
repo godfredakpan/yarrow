@@ -29,13 +29,13 @@ export function DidYouKnow() {
               Bite-sized facts to help you understand your health — swipe through and get curious.
             </p>
           </div>
-          <Link
+          {/* <Link
             to="/programs"
             className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all shrink-0"
           >
             Explore all resources
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </Link> */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-10 items-start lg:items-stretch">

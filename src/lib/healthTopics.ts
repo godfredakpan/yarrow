@@ -172,7 +172,9 @@ For questions or support, contact a trusted healthcare provider or email care@ya
 // ─── PCOS (from PCOS.pdf) ─────────────────────────────────────────────────────
 const pcosFull = `
 
-**PCOS(Polycystic Ovary Syndrome)** is a common hormone condition that affects women during their reproductive years. It happens when the body makes higherthannormal levels of certain hormones called androgens. This can cause irregular periods, acne, weight gain, extra hair growth, and trouble getting pregnant.
+**PCOS(Polycystic Ovary Syndrome)** 
+
+PCOS is a common hormone condition that affects women during their reproductive years. It happens when the body makes higherthannormal levels of certain hormones called androgens. This can cause irregular periods, acne, weight gain, extra hair growth, and trouble getting pregnant.
 
 Even though the name includes the word “cyst,” not everyone with PCOS has ovarian cysts. Doctors diagnose PCOS based on symptoms, blood tests, and sometimes an ultrasound—not cysts alone.
 
@@ -194,26 +196,32 @@ PCOS symptoms can be different for each person. Some people have only one or two
 
 Doctors don’t know the exact cause, but several things may contribute:
 
-1. Hormone Imbalance
+**1. Hormone Imbalance** 
+
 High androgen levels can stop the ovaries from releasing eggs regularly. This leads to irregular periods, acne, and extra hair growth.
 
-2. Insulin Resistance
+**2. Insulin Resistance**
+
 Many people with PCOS have insulin resistance, meaning their bodies don’t use insulin well.
 This causes insulin levels to rise, which leads the ovaries to make more androgens.
 Being overweight can make insulin resistance worse.
 
-3. Genetics
+**3. Genetics**
+
 PCOS often runs in families. If a parent or sibling has PCOS, the chances of having it are higher.
 
 **Treatment and Management**
 
 Treatment of PCOS can include lifestyle changes, medications or a combination of both
 
-**Living With PCOS**
+**Living With PCOS** 
 
 PCOS is a lifelong condition, but many people manage it well with the right care.
 Regular checkins with a doctor can help prevent complications and support overall health.
-If you think you might have PCOS—or if you have it and want help managing your symptoms—talk with a healthcare professional. You are not alone, and support is available. For more answers, you can contact us at care@yarrow.com.`;
+If you think you might have PCOS—or if you have it and want help managing your symptoms—talk with a healthcare professional. 
+You are not alone, and support is available. 
+
+For more answers, you can contact us at care@yarrow.com.`;
 
 // ─── Contraceptives (from Did you know.pdf — Contraceptives section only) ────
 const contraceptivesFull = `

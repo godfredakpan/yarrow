@@ -65,9 +65,9 @@ const question: {
   question: "What are you most interested in?",
   options: [
     { label: "Puberty, periods & contraception basics", pathway: "foundations" },
-    { label: "Family planning, fertility & conditions like PCOS", pathway: "reproductive" },
+    { label: "Family planning, Conditions like PCOS", pathway: "reproductive" },
     { label: "Hot flashes, mood & perimenopause", pathway: "hormonal" },
-    { label: "Bone health, screenings & staying active", pathway: "wellness" },
+    { label: "Screenings", pathway: "wellness" },
   ],
 };
 

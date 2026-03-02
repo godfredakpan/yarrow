@@ -12,7 +12,7 @@ const Programs = () => {
       <PageBanner
         eyebrow="Sections"
         title="Journey Guides"
-        description="Start your care path"
+        description="Start your care path — Pick a topic, explore resources, and take the next step. All free, evidence-based, and here for you."
         image={images.bannerPrograms}
       />
 

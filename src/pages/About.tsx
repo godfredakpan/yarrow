@@ -49,7 +49,7 @@ const About = () => {
             infections, PCOS, endometriosis, hormonal imbalances, and more. Many feel dismissed, unheard, or unsure
             where to turn for trustworthy guidance.
           </p>
-          <p className="text-lg text-muted-foreground mb-4">Yarrow bridges that gap.</p>
+          {/* <p className="text-lg text-muted-foreground mb-4">Yarrow bridges that gap.</p>
           <p className="text-lg text-muted-foreground mb-4">
             Yarrow gives women access to meaningful, evidence-based information about their health. It creates a safe
             space to ask questions, learn about their bodies, and better understand symptoms or concerns they may be
@@ -59,16 +59,17 @@ const About = () => {
             In addition to education, Yarrow provides access to virtual care through telehealth services, making
             professional support more accessible and convenient. Whether a woman needs guidance, clarification, or next
             steps, Yarrow connects her to the care she deserves.
-          </p>
+          </p> */}
           <p className="text-lg text-muted-foreground mb-3">Our mission is simple:</p>
           <ul className="list-disc pl-6 space-y-1 text-lg text-muted-foreground mb-4">
             <li>Empower women with knowledge</li>
             <li>Provide access to trusted care</li>
             <li>Close the gaps in women’s healthcare—one informed decision at a time</li>
           </ul>
+          {/* vission statement below*/}
+          <p className="text-lg text-muted-foreground mb-3">Our vision statement:</p>
           <p className="text-lg text-muted-foreground">
-            Yarrow exists to help women feel informed, supported, and confident in managing their health.
-          </p>
+          Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her health. Through accessible education on contraception, reproductive health conditions, and common infections, we aim to empower women to make informed decisions and advocate for their well-being.</p>
         </div>
       </section>
 
