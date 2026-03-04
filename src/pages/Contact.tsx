@@ -317,7 +317,7 @@ const Contact = () => {
                         <SelectContent>
                           <SelectItem value="general">General Health Questions</SelectItem>
                           <SelectItem value="menstrual">Menstrual Health</SelectItem>
-                          <SelectItem value="fertility">Fertility & Family Planning</SelectItem>
+                          <SelectItem value="familyplanning">Family Planning</SelectItem>
                           <SelectItem value="pcos">PCOS / Endometriosis</SelectItem>
                           <SelectItem value="menopause">Perimenopause / Menopause</SelectItem>
                           <SelectItem value="mental">Mental Health & Wellness</SelectItem>

@@ -5,7 +5,6 @@
 export const didYouKnowFacts: string[] = [
   "Different types of period products are available for your use.",
   "Disposable options like Pads and tampons, and reusable alternatives such as menstrual cups, menstrual discs, period underwear and sea sponges, are all designed for managing menstrual flow, offering various levels of convenience, sustainability and body compatibility",
-  "Consider convenience, comfort and cost",
   "Tampons/cups/discs offer freedom for an active life, sports and perhaps a sustainable solution for longer term use.",
   "If leaks occur, its may be due to size or positioning. Try a different product or consult with a clinician if needed.",
   "Birth control pills work best when taken at the same time every day. In addition to preventing pregnancy, some pills can also help with lighter periods, more regular cycles, and reduced menstrual cramps.",

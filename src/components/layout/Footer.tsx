@@ -17,7 +17,7 @@ const footerSections = {
     title: "Journey Guides",
     links: [
       { name: "Puberty & periods", path: "/programs/foundations" },
-      { name: "Reproductive health & fertility", path: "/programs/reproductive" },
+      { name: "Reproductive health", path: "/programs/reproductive" },
       { name: "Hormonal changes & perimenopause", path: "/programs/hormonal" },
       { name: "Long-term wellness", path: "/programs/wellness" },
     ],

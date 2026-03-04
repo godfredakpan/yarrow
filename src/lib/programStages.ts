@@ -53,12 +53,12 @@ export const programStages: ProgramStage[] = [
     description:
       "Family planning, and managing conditions like PCOS or endometriosis. Compare contraceptive options and preconception health.",
     descriptionLong:
-      "Focused on reproductive health for anyone who wants it: fertility awareness, family planning, managing conditions like PCOS and endometriosis, comparing contraceptive options, vaginal health, managing UTIs, and preconception health. No age limits — just evidence-based support.",
+      "Focused on reproductive health for anyone who wants it: family planning, managing conditions like PCOS and endometriosis, comparing contraceptive options, vaginal health, managing UTIs, and preconception health. No age limits — just evidence-based support.",
     image: `${IMG}/youngwomen.jpeg`,
     color: "young",
     icon: Heart,
     topics: [
-      "Fertility awareness and family planning",
+      "Family planning",
       "Managing PCOS, endometriosis, and other conditions",
       "Contraceptive options comparison",
       "Preconception health",

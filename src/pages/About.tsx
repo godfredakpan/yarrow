@@ -32,7 +32,7 @@ const About = () => {
       <PageBanner
         eyebrow="About us"
         title="About us"
-        description="We are dedicated to providing trusted, accessible women's health information and support to women at every stage of life."
+        description="Yarrow was created to address the gaps that continue to exist in women’s healthcare."
         image={images.bannerAbout}
       />
 
@@ -40,9 +40,9 @@ const About = () => {
       <section className="section-padding">
         <div className="container-journal max-w-3xl">
           {/* <h2 className="font-display mb-6">About Yarrow</h2> */}
-          <p className="text-lg text-muted-foreground mb-4">
+          {/* <p className="text-lg text-muted-foreground mb-4">
             Yarrow was created to address the gaps that continue to exist in women’s healthcare.
-          </p>
+          </p> */}
           <p className="text-lg text-muted-foreground mb-4">
             Too often, women are left with unanswered questions about their bodies. They struggle to find clear,
             reliable information on topics like birth control, irregular periods, urinary tract infections, yeast
@@ -66,10 +66,7 @@ const About = () => {
             <li>Provide access to trusted care</li>
             <li>Close the gaps in women’s healthcare—one informed decision at a time</li>
           </ul>
-          {/* vission statement below*/}
-          <h2 className="text-lg text-muted-foreground mb-3 font-display">Our vision statement:</h2>
-          <p className="text-lg text-muted-foreground">
-          Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her health. Through accessible education on contraception, reproductive health conditions, and common infections, we aim to empower women to make informed decisions and advocate for their well-being.</p>
+          {/* vision statement moved to homepage */}
         </div>
       </section>
 

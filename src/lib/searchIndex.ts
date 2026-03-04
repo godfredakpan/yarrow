@@ -55,11 +55,11 @@ export const searchIndex: SearchItem[] = [
     keywords: ["puberty", "periods", "menstrual", "contraception", "first period"],
   },
   {
-    title: "Reproductive health & fertility",
+    title: "Reproductive health",
     path: "/programs/reproductive",
-    snippet: "Family planning, fertility, PCOS, reproductive health.",
+    snippet: "Family planning, PCOS, reproductive health.",
     category: "Programme",
-    keywords: ["fertility", "pcos", "family planning", "pregnancy", "reproductive"],
+    keywords: ["pcos", "family planning", "pregnancy", "reproductive"],
   },
   {
     title: "Hormonal changes & perimenopause",
@@ -88,13 +88,6 @@ export const searchIndex: SearchItem[] = [
     snippet: "Information and support for PCOS.",
     category: "Topic",
     keywords: ["pcos", "polycystic"],
-  },
-  {
-    title: "Fertility",
-    path: "/programs/reproductive",
-    snippet: "Fertility awareness and family planning.",
-    category: "Topic",
-    keywords: ["fertility", "family planning", "pregnancy"],
   },
   {
     title: "Menopause",

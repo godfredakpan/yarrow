@@ -29,7 +29,7 @@ import { useState } from "react";
 const TOPIC_LABELS: Record<string, string> = {
   general: "General Health Questions",
   menstrual: "Menstrual Health",
-  fertility: "Fertility & Family Planning",
+  familyplanning: "Family Planning",
   pcos: "PCOS / Endometriosis",
   menopause: "Perimenopause / Menopause",
   mental: "Mental Health & Wellness",

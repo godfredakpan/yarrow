@@ -44,10 +44,23 @@ export function HeroSection() {
               className="mt-6 h-14 px-8 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base border-0 shadow-lg gap-2 [animation-delay:200ms]"
             >
               <Link to="/programs" className="gap-2">
-                Health Hubs
+                Health Hub
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
+          </div>
+
+          {/* Our vision section */}
+          <div className="max-w-md bg-background/90 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-border/60 shadow-lg shadow-foreground/[0.08] animate-fade-in-up opacity-0 [animation-fill-mode:forwards] lg:mb-4 text-foreground">
+            <p className="section-eyebrow mb-1 text-foreground/90">Our vision</p>
+            <p className="text-sm uppercase tracking-[0.18em] text-foreground/70 mb-2">
+              The future we&apos;re building toward
+            </p>
+            <p className="text-sm sm:text-[0.9375rem] leading-relaxed text-foreground/90">
+              Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her
+              health. Through accessible education on contraception, reproductive health conditions, and common infections,
+              we aim to empower women to make informed decisions and advocate for their well-being.
+            </p>
           </div>
         </div>
       </div>

@@ -162,7 +162,7 @@ export function Header() {
             {/* <Button asChild size="sm" className="h-9 bg-primary hover:bg-primary/90">
               <Link to="/programs">Get started</Link>
             </Button> */}
-            {isHome && homeSidebar && (
+            {homeSidebar && (
               <Button
                 type="button"
                 variant="ghost"
@@ -176,7 +176,7 @@ export function Header() {
                 aria-label="Open health topics"
                 aria-expanded={homeSidebar.isOpen}
               >
-                <SidebarMenuIcon className="h-5 w-5" />
+                <BookOpen className="h-5 w-5" />
               </Button>
             )}
           </div>
@@ -191,7 +191,7 @@ export function Header() {
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
-            {isHome && homeSidebar && (
+            {homeSidebar && (
               <Button
                 type="button"
                 variant="ghost"
