@@ -84,7 +84,7 @@ const ProgramStagePage = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="h-12 px-8">
-              <Link to="/contact">
+              <Link to="/info">
                 Learn more
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

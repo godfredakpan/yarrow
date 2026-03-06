@@ -49,19 +49,6 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
-
-          {/* Our vision section */}
-          <div className="max-w-md bg-background/90 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-border/60 shadow-lg shadow-foreground/[0.08] animate-fade-in-up opacity-0 [animation-fill-mode:forwards] lg:mb-4 text-foreground">
-            <p className="section-eyebrow mb-1 text-foreground/90">Our vision</p>
-            <p className="text-sm uppercase tracking-[0.18em] text-foreground/70 mb-2">
-              The future we&apos;re building toward
-            </p>
-            <p className="text-sm sm:text-[0.9375rem] leading-relaxed text-foreground/90">
-              Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her
-              health. Through accessible education on contraception, reproductive health conditions, and common infections,
-              we aim to empower women to make informed decisions and advocate for their well-being.
-            </p>
-          </div>
         </div>
       </div>
     </section>

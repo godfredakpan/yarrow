@@ -65,18 +65,18 @@ export const events: EventItem[] = [
     spotsLeft: 30,
     image: images.eventWorkshop,
   },
-  {
-    id: 5,
-    title: "Fertility Awareness Method Training",
-    description:
-      "Learn about natural family planning methods and how to track your fertility signs effectively.",
-    date: "April 20, 2026",
-    time: "10:00 AM - 12:00 PM",
-    location: "Health Education Center",
-    category: "Training",
-    spotsLeft: 20,
-    image: images.eventCommunity,
-  },
+  // {
+  //   id: 5,
+  //   title: "Fertility Awareness Method Training",
+  //   description:
+  //     "Learn about natural family planning methods and how to track your fertility signs effectively.",
+  //   date: "April 20, 2026",
+  //   time: "10:00 AM - 12:00 PM",
+  //   location: "Health Education Center",
+  //   category: "Training",
+  //   spotsLeft: 20,
+  //   image: images.eventCommunity,
+  // },
   {
     id: 6,
     title: "Yoga for Women's Wellness",

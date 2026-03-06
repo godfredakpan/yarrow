@@ -183,7 +183,7 @@ const Contact = () => {
       <PageBanner
         eyebrow="Connect"
         title="Contact"
-        description="Book a free consultation or get in touch with our team. We're here to help and support you."
+        description="Telemedicine allows our team to connect with you wherever you are, making healthcare more convenient and accessible."
         image={images.bannerContact}
       />
 
