@@ -1,5 +1,5 @@
-import { useParams, useNavigate, Navigate } from "react-router-dom";
-import { ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
+import { useParams, useNavigate, Navigate, Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight, BookOpen, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,23 +16,43 @@ import {
   healthTopics,
 } from "@/lib/healthTopics";
 
-/** Render a block that may contain inline **bold** */
+/** Normalize asterisk-like chars to ASCII * so **bold** is reliable (handles copy-paste Unicode) */
+function normalizeAsterisks(s: string): string {
+  return s
+    .replace(/\u2217/g, "*")  // ∗ (Unicode asterisk operator)
+    .replace(/\uFF0A/g, "*"); // ＊ (fullwidth asterisk)
+}
+
+/** Render text with **bold** converted to <strong> (no raw asterisks shown) */
 function renderInlineBold(text: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, j) =>
-    part.startsWith("**") && part.endsWith("**") ? (
+  const normalized = normalizeAsterisks(text);
+  const parts = normalized.split("**");
+  const segments: ({ type: "text"; value: string } | { type: "bold"; value: string })[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 0) {
+      if (parts[i].length > 0) segments.push({ type: "text", value: parts[i] });
+    } else {
+      segments.push({ type: "bold", value: parts[i] });
+    }
+  }
+  if (segments.length === 0 && text.length > 0) {
+    segments.push({ type: "text", value: normalized });
+  }
+  return segments.map((seg, j) =>
+    seg.type === "bold" ? (
       <strong key={j} className="font-semibold text-foreground">
-        {part.slice(2, -2)}
+        {seg.value}
       </strong>
     ) : (
-      <span key={j}>{part}</span>
+      <span key={j}>{seg.value}</span>
     )
   );
 }
 
 /** Simple render: paragraphs, **bold**, and • bullet lists */
 function TopicContent({ content }: { content: string }) {
-  const blocks = content.trim().split(/\n\n+/);
+  const normalizedContent = normalizeAsterisks(content);
+  const blocks = normalizedContent.trim().split(/\n\n+/);
   return (
     <div className="prose prose-lg max-w-none prose-headings:font-display prose-p:text-muted-foreground prose-p:leading-relaxed prose-ul:my-4 prose-li:text-muted-foreground prose-li:leading-relaxed">
       {blocks.map((block, i) => {
@@ -72,19 +92,64 @@ function TopicContent({ content }: { content: string }) {
   );
 }
 
+/** Index page: list all health topics so users can choose one */
+function InfoIndex() {
+  return (
+    <Layout>
+      <section className="section-padding">
+        <div className="container-journal">
+          <div className="max-w-2xl mb-12">
+            <div className="flex items-center gap-2 text-primary mb-3">
+              <BookOpen className="h-5 w-5" />
+              <span className="text-sm font-medium uppercase tracking-wider">Health information</span>
+            </div>
+            <h1 className="font-display text-3xl md:text-4xl mb-4 text-foreground">
+              Browse health topics
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Evidence-based articles on periods, reproductive health, contraception, and more. Pick a topic to read in full.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {healthTopics.map((t) => (
+              <Link
+                key={t.slug}
+                to={`/info/${t.slug}`}
+                className="group flex flex-col rounded-xl border border-border bg-card p-6 text-left transition-all duration-200 hover:border-primary/30 hover:shadow-lg hover:shadow-foreground/[0.04]"
+              >
+                <h2 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {t.title}
+                </h2>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
+                  {renderInlineBold(t.summary)}
+                </p>
+                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                  Read article
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
 export default function Info() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
 
   if (!slug) {
-    return <Navigate to={`/info/${healthTopicSlugs[0]}`} replace />;
+    return <InfoIndex />;
   }
 
   const topic = getTopicBySlug(slug);
   const { prev, next } = getPrevNextSlug(slug);
 
   if (!topic) {
-    return <Navigate to={`/info/${healthTopicSlugs[0]}`} replace />;
+    return <Navigate to="/info" replace />;
   }
 
   return (
@@ -93,7 +158,9 @@ export default function Info() {
         <div className="container-journal max-w-3xl">
           <div className="flex items-center gap-2 text-primary mb-4">
             <BookOpen className="h-5 w-5" />
-            <span className="text-sm font-medium uppercase tracking-wider">Health information</span>
+            <Link to="/info" className="text-sm font-medium uppercase tracking-wider hover:underline">
+              Health information
+            </Link>
           </div>
           <h1 className="font-display text-3xl md:text-4xl mb-6 text-foreground">
             {topic.title}

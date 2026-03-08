@@ -9,7 +9,7 @@ const footerSections = {
       { name: "About", path: "/about" },
       { name: "Journey Guides", path: "/programs" },
       { name: "Events", path: "/events" },
-      { name: "Info", path: "/info/what-is-a-period" },
+      { name: "Info", path: "/info" },
       { name: "Contact", path: "/contact" },
     ],
   },
