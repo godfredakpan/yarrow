@@ -31,7 +31,7 @@ const About = () => {
     <Layout>
       <PageBanner
         eyebrow="About us"
-        title="About us"
+        title=" "
         description="Yarrow was created to address the gaps that continue to exist in women’s healthcare."
         image={images.bannerAbout}
       />
