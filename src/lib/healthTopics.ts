@@ -553,8 +553,6 @@ For more information, contact info@yarrowcare.org`;
 
 // ─── Healthy Aging for Women Over 50 (from Healthy Aging for Women Over 50.pdf) ─
 const healthyAgingFull = `
-**Healthy Aging for Women Over 50**
-
 Aging is something we all go through, and the beautiful thing is that with a few simple habits, women over 50 can continue to feel strong, energized, and deeply well. This stage of life brings changes—some expected, some surprising—but staying connected to your body and caring for your overall well-being can help you feel your best every day.
 
 As you move through your 50s and beyond, you may notice shifts like a slower metabolism, changes in sleep, or the occasional hot flash. Bone density can naturally decrease, and heart health becomes something to pay closer attention to. These changes aren't "good" or "bad"—they're simply part of this chapter, and knowing about them can help you stay proactive.
@@ -573,7 +571,6 @@ At the end of the day, healthy aging isn't about big, dramatic changes. It's abo
 
 // ─── Hot Flashes and How to Manage Them (from Hot Flashes and How to Manage Them.docx.pdf) ─
 const hotFlashesFull = `
-**Hot Flashes and How to Manage Them**
 
 Hot flashes are one of the most common and disruptive symptoms of menopause. They involve a sudden feeling of intense heat that spreads through the body—often with flushing, dizziness, sweating, or, in some cases, chills afterward. Episodes typically last a few minutes but can feel much longer.
 
@@ -620,8 +617,6 @@ For questions or more information, please contact info@yarrowcare.org.`;
 
 // ─── Know Your Bones (from Know Your Bones.docx.pdf) ─────────────────────────
 const knowYourBonesFull = `
-**Know Your Bones: Understanding Osteoporosis and Protecting Your Bone Health**
-
 Osteoporosis is a common condition that weakens bones and makes them more prone to fractures. As bone density decreases, even minor falls or everyday movements can lead to breaks—most often in the spine, hips, and wrists. Although osteoporosis can affect anyone, it is especially common in women, particularly after menopause. In fact, about half of women over age 50 will experience an osteoporosis-related fracture during their lifetime.
 
 A major reason women are at higher risk after menopause is the steep drop in estrogen, a hormone essential for maintaining strong bones. During the first five to seven years after menopause, women may lose up to 20% of their bone mass. Osteoporosis develops when too much old bone is broken down or when the body cannot rebuild bone fast enough to replace what is lost.
@@ -655,8 +650,6 @@ Use this quick checklist to support strong bones every day.
 
 // ─── Understanding HPV (from Understanding HPV.docx.pdf) ─────────────────────
 const understandingHpvFull = `
-**Understanding HPV: What You Need to Know**
-
 Human papillomavirus (HPV) is one of the most common viral infections worldwide. Although HPV is very common, many people are unaware they have it because most types cause no symptoms and go away on their own. Still, certain strains can lead to important long-term health concerns, which makes awareness and prevention essential.
 
 **What Is HPV?**
