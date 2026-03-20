@@ -61,7 +61,7 @@ const Programs = () => {
                         }`}
                       />
                     </div>
-                    <h2 className="font-display text-xl mb-1">{stage.title}</h2>
+                    <h2 className="section-card-title mb-1">{stage.title}</h2>
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
                       {stage.description}
                     </p>
@@ -80,8 +80,8 @@ const Programs = () => {
       {/* CTA */}
       <section className="section-padding bg-muted/50">
         <div className="container-narrow text-center">
-          <h2 className="font-display mb-4">Not sure which programme to choose?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <h2 className="section-heading">Not sure which programme to choose?</h2>
+          <p className="section-lead mb-8">
             Get in touch and we’ll point you to the right resources — or just explore and see what fits.
           </p>
           <Button asChild size="lg">

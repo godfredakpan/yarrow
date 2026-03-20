@@ -155,7 +155,39 @@
   }
 
   .section-eyebrow {
-    @apply text-xs font-semibold tracking-[0.15em] uppercase text-primary mb-3;
+    @apply font-display text-xs font-semibold tracking-[0.15em] uppercase text-primary mb-3;
+  }
+
+  /* Shared scale for home blocks & matching page titles (Golos / font-display) */
+  .section-heading {
+    @apply font-display text-3xl md:text-4xl lg:text-[2.75rem] mb-4 leading-tight text-foreground;
+  }
+
+  .section-lead {
+    @apply text-muted-foreground text-lg leading-relaxed;
+  }
+
+  /* Subheading inside cards / quiz (matches global h3 scale) */
+  .section-subheading {
+    @apply font-display font-semibold text-xl md:text-2xl text-foreground;
+  }
+
+  /* Card / tile titles in section grids (Journey Guides, events, etc.) */
+  .section-card-title {
+    @apply font-display font-semibold text-lg md:text-xl text-foreground;
+  }
+
+  /* CTA band on primary background */
+  .section-eyebrow-inverted {
+    @apply font-display text-xs font-semibold tracking-[0.15em] uppercase text-primary-foreground/80 mb-3;
+  }
+
+  .section-heading-inverted {
+    @apply font-display text-3xl md:text-4xl lg:text-[2.75rem] mb-4 leading-tight text-primary-foreground;
+  }
+
+  .section-lead-inverted {
+    @apply text-primary-foreground/90 text-lg mb-8 leading-relaxed max-w-lg;
   }
 }
 

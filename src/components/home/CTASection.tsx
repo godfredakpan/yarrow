@@ -19,13 +19,9 @@ export function CTASection() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="font-display text-xs font-semibold tracking-[0.15em] uppercase text-primary-foreground/80 mb-3">
-            We’re here for you
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-[2.5rem] mb-4 text-primary-foreground leading-tight">
-            Ready to take the next step?
-          </h2>
-          <p className="text-primary-foreground/90 text-lg mb-8 leading-relaxed max-w-lg">
+          <p className="section-eyebrow-inverted">We’re here for you</p>
+          <h2 className="section-heading-inverted">Ready to take the next step?</h2>
+          <p className="section-lead-inverted">
             Free, confidential chat with our team — no judgement, just support. Online or in person.
           </p>
           <Button

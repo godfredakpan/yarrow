@@ -104,8 +104,8 @@ export function AgeQuiz() {
               <span className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-3xl mb-4">
                 {pathway.emoji}
               </span>
-              <h2 className="font-display text-2xl md:text-3xl mb-2">Here’s your match!</h2>
-              <p className="text-muted-foreground">
+              <h2 className="section-heading">Here’s your match!</h2>
+              <p className="section-lead">
                 Jump in and see what’s inside — resources, support, and next steps.
               </p>
             </div>
@@ -119,7 +119,7 @@ export function AgeQuiz() {
                   <Icon className={`w-10 h-10 ${pathway.color}`} />
                 </div>
                 <div className="text-center sm:text-left flex-1">
-                  <h3 className="font-display font-semibold text-xl md:text-2xl mb-1">{pathway.label}</h3>
+                  <h3 className="section-subheading mb-1">{pathway.label}</h3>
                   <p className="text-sm text-muted-foreground mb-6">
                     Ready to explore? Click through for resources and support.
                   </p>
@@ -162,11 +162,11 @@ export function AgeQuiz() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6">
               <Sparkles className="w-8 h-8" />
             </div>
-            <p className="section-eyebrow mb-3">Find your fit</p>
-            <h2 className="font-display text-2xl md:text-3xl mb-3 font-semibold">
+            <p className="section-eyebrow">Find your fit</p>
+            <h2 className="section-heading">
               Not sure where to start?
             </h2>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="section-lead mb-8">
               Answer one quick question and we’ll point you to a Journey Guide that’s right for you. No sign-up — just explore.
             </p>
             <Button
@@ -195,7 +195,7 @@ export function AgeQuiz() {
           }`}
         >
           <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-lg">
-            <h3 className="font-display font-semibold text-xl md:text-2xl mb-6 text-foreground">
+            <h3 className="section-subheading mb-6">
               {question.question}
             </h3>
             <div className="grid sm:grid-cols-2 gap-3">

@@ -145,8 +145,8 @@ const Events = () => {
             <div className="space-y-14">
               {/* Upcoming events */}
               <div>
-                <h2 className="font-display text-2xl md:text-3xl mb-6 flex items-center gap-2">
-                  <Calendar className="h-7 w-7 text-primary" />
+                <h2 className="section-heading mb-6 flex items-center gap-2">
+                  <Calendar className="h-7 w-7 text-primary shrink-0" />
                   Upcoming events
                 </h2>
                 {upcoming.length === 0 ? (
@@ -164,8 +164,8 @@ const Events = () => {
 
               {/* Past events */}
               <div>
-                <h2 className="font-display text-2xl md:text-3xl mb-6 flex items-center gap-2">
-                  <History className="h-7 w-7 text-muted-foreground" />
+                <h2 className="section-heading mb-6 flex items-center gap-2">
+                  <History className="h-7 w-7 text-muted-foreground shrink-0" />
                   Past events
                 </h2>
                 {past.length === 0 ? (
@@ -189,8 +189,8 @@ const Events = () => {
       <section className="section-padding bg-muted/50">
         <div className="container-narrow text-center">
           <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-          <h2 className="font-display mb-4">Want to host an event?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <h2 className="section-heading">Want to host an event?</h2>
+          <p className="section-lead mb-8">
             We partner with organizations and communities to bring women's
             health education to more people. Get in touch to discuss hosting
             an event in your area.

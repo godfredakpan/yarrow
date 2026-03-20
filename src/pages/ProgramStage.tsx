@@ -56,12 +56,12 @@ const ProgramStagePage = () => {
       {/* Content */}
       <section className="section-padding">
         <div className="container-journal max-w-4xl">
-          <p className="text-xl text-muted-foreground leading-relaxed mb-10">
+          <p className="section-lead text-xl mb-10">
             {stage.descriptionLong}
           </p>
 
           <div className="bg-card rounded-lg p-8 border border-border mb-10">
-            <h2 className="font-display text-xl mb-6">Topics we cover</h2>
+            <h2 className="section-subheading mb-6">Topics we cover</h2>
             <ul className="space-y-3">
               {stage.topics.map((topic) => (
                 <li key={topic} className="flex items-start gap-3">

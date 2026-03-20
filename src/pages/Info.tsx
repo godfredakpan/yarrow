@@ -60,7 +60,7 @@ function TopicContent({ content }: { content: string }) {
         if (!trimmed) return null;
         if (/^\*\*[^*]+\*\*$/.test(trimmed)) {
           return (
-            <h3 key={i} className="font-display font-semibold text-foreground mt-6 mb-2 text-lg">
+            <h3 key={i} className="section-card-title mt-6 mb-2">
               {trimmed.replace(/\*\*/g, "")}
             </h3>
           );
@@ -99,14 +99,14 @@ function InfoIndex() {
       <section className="section-padding">
         <div className="container-journal">
           <div className="max-w-2xl mb-12">
-            <div className="flex items-center gap-2 text-primary mb-3">
-              <BookOpen className="h-5 w-5" />
-              <span className="text-sm font-medium uppercase tracking-wider">Health information</span>
+            <div className="flex items-center gap-2 mb-3">
+              <BookOpen className="h-5 w-5 shrink-0 text-primary" />
+              <span className="section-eyebrow !mb-0">Health information</span>
             </div>
-            <h1 className="font-display text-3xl md:text-4xl mb-4 text-foreground">
+            <h1 className="section-heading">
               Browse health topics
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="section-lead">
               Evidence-based articles on periods, reproductive health, contraception, and more. Pick a topic to read in full.
             </p>
           </div>
@@ -118,7 +118,7 @@ function InfoIndex() {
                 to={`/info/${t.slug}`}
                 className="group flex flex-col rounded-xl border border-border bg-card p-6 text-left transition-all duration-200 hover:border-primary/30 hover:shadow-lg hover:shadow-foreground/[0.04]"
               >
-                <h2 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h2 className="section-card-title mb-2 group-hover:text-primary transition-colors">
                   {t.title}
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-1">
@@ -156,13 +156,16 @@ export default function Info() {
     <Layout>
       <section className="section-padding">
         <div className="container-journal max-w-3xl">
-          <div className="flex items-center gap-2 text-primary mb-4">
-            <BookOpen className="h-5 w-5" />
-            <Link to="/info" className="text-sm font-medium uppercase tracking-wider hover:underline">
+          <div className="flex items-center gap-2 mb-4">
+            <BookOpen className="h-5 w-5 shrink-0 text-primary" />
+            <Link
+              to="/info"
+              className="section-eyebrow !mb-0 hover:underline inline-block text-primary"
+            >
               Health information
             </Link>
           </div>
-          <h1 className="font-display text-3xl md:text-4xl mb-6 text-foreground">
+          <h1 className="section-heading mb-6">
             {topic.title}
           </h1>
 

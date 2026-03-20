@@ -12,10 +12,11 @@ export function VisionSection() {
           }`}
         >
           {/* <p className="section-eyebrow mb-3">Our vision</p> */}
-          <h2 className="font-display text-2xl md:text-3xl mb-4 leading-tight">
-            The future we&apos;re building toward
+          <h2 className="section-heading">
+            {/* The future we&apos;re building toward */}
+            The future we are trying to create
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="section-lead">
             Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her
             health. Through accessible education on contraception, reproductive health conditions, and common infections,
             we aim to empower women to make informed decisions and advocate for their well-being.

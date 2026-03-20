@@ -156,8 +156,8 @@ const Contact = () => {
             <div className="w-20 h-20 rounded-full bg-secondary/10 mx-auto mb-6 flex items-center justify-center">
               <CheckCircle2 className="w-10 h-10 text-secondary" />
             </div>
-            <h1 className="font-display text-3xl md:text-4xl mb-4">Thank you</h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h1 className="section-heading">Thank you</h1>
+            <p className="section-lead mb-8">
               {eventIdValid
                 ? `Your registration for ${eventTitle} has been submitted. We'll confirm your spot soon.`
                 : "Your consultation request has been submitted. Our team will contact you within 24-48 hours to schedule your free session."}
@@ -193,7 +193,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="lg:col-span-1">
-              <h2 className="font-display text-2xl mb-6">Get in touch</h2>
+              <h2 className="section-heading mb-6">Get in touch</h2>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
@@ -253,10 +253,10 @@ const Contact = () => {
             {/* Consultation Form */}
             <div className="lg:col-span-2">
               <div className="rounded-lg border-2 border-primary bg-primary/5 p-8">
-                <h2 className="font-display text-2xl mb-2">
+                <h2 className="section-heading mb-2">
                   {eventIdValid ? `Register for ${eventTitle}` : "Book a free consultation"}
                 </h2>
-                <p className="text-muted-foreground mb-8">
+                <p className="section-lead mb-8">
                   {eventIdValid
                     ? "Enter your details below to register for this event."
                     : "Fill out the form below and we'll contact you to schedule your free consultation session."}

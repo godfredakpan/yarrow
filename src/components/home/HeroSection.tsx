@@ -29,14 +29,11 @@ export function HeroSection() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-8">
           {/* Title and subtitle */}
           <div className="max-w-2xl animate-fade-in-up opacity-0 [animation-fill-mode:forwards]">
-            <p className="text-primary-foreground/95 text-sm font-medium tracking-[0.2em] uppercase mb-3 [animation-delay:75ms] drop-shadow-sm">
-              Women&apos;s health, your way
-            </p>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-primary-foreground leading-[1.1] tracking-tight text-balance mb-4 [animation-delay:100ms] drop-shadow-sm">
+            {/* <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-primary-foreground leading-[1.1] tracking-tight text-balance mb-4 [animation-delay:100ms] drop-shadow-sm">
               Yarrow
-            </h1>
+            </h1> */}
             <p className="text-lg text-primary-foreground/95 leading-relaxed [animation-delay:150ms] drop-shadow-sm">
-              Trusted information, free support, and a community that gets it. See what we offer — and take the first step.
+              Free support, and a community that gets it. See what we offer — and take the first step.
             </p>
             <Button
               asChild

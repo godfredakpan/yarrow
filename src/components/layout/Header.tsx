@@ -1,18 +1,17 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, Search, BookOpen } from "lucide-react";
-import { SidebarMenuIcon } from "@/components/icons/SidebarMenuIcon";
 import { useHomeSidebar } from "@/contexts/HomeSidebarContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Journey Guides", path: "/programs" },
-  { name: "Events", path: "/events" },
+const navLinks: { name: string; path: string }[] = [
+  // { name: "Home", path: "/" },
+  // { name: "About", path: "/about" },
+  // { name: "Journey Guides", path: "/programs" },
+  // { name: "Events", path: "/events" },
   // { name: "Info", path: "/info/what-is-a-period" },
-  { name: "Contact", path: "/contact" },
+  // { name: "Contact", path: "/contact" },
 ];
 
 export function Header() {
@@ -21,12 +20,12 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const searchPanelRef = useRef<HTMLDivElement>(null);
-  const location = useLocation();
   const navigate = useNavigate();
   const homeSidebar = useHomeSidebar();
-  const isHome = location.pathname === "/";
-  const isActive = (path: string) =>
-    location.pathname === path || (path.startsWith("/info") && location.pathname.startsWith("/info"));
+  // const location = useLocation();
+  // const isHome = location.pathname === "/";
+  // const isActive = (path: string) =>
+  //   location.pathname === path || (path.startsWith("/info") && location.pathname.startsWith("/info"));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -70,8 +69,8 @@ export function Header() {
       }`}
     >
       <div className="container-journal">
-        <div className="flex items-center justify-between h-16 md:h-[4.25rem]">
-          <Link to="/" className="flex items-center gap-3">
+        <div className="flex items-center justify-between min-h-16 md:min-h-[4.5rem] py-1.5 md:py-2">
+          <Link to="/" className="flex flex-col items-start gap-0.5 shrink-0">
             <img
               src="/assets/FullLogo/SVG/YarrowLogo.svg"
               alt="Yarrow"
@@ -79,9 +78,12 @@ export function Header() {
               width={140}
               height={40}
             />
-            {/* <span className="font-display font-bold text-foreground text-lg sm:hidden">Yarrow</span> */}
+            <span className="text-[0.625rem] sm:text-[0.6875rem] leading-tight tracking-wide text-muted-foreground font-medium uppercase">
+              Women&apos;s health, your way
+            </span>
           </Link>
 
+          {/* Primary nav — uncomment navLinks entries above and isActive/location to restore
           <div className="hidden lg:flex items-center gap-1">
             <nav className="flex items-center gap-1">
             {navLinks.map((link) => (
@@ -99,6 +101,7 @@ export function Header() {
             ))}
           </nav>
           </div>
+          */}
 
           <div className="hidden lg:flex items-center gap-2">
             <div className="relative" ref={searchPanelRef}>
@@ -236,7 +239,7 @@ export function Header() {
               </div>
             </form>
             <nav className="flex flex-col gap-0.5">
-              {navLinks.map((link) => (
+              {/* {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
@@ -247,7 +250,7 @@ export function Header() {
                 >
                   {link.name}
                 </Link>
-              ))}
+              ))} */}
               <div className="px-4 pt-4 mt-2 border-t border-border">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>

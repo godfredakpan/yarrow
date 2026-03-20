@@ -43,7 +43,7 @@ const About = () => {
           {/* <p className="text-lg text-muted-foreground mb-4">
             Yarrow was created to address the gaps that continue to exist in women’s healthcare.
           </p> */}
-          <p className="text-lg text-muted-foreground mb-4">
+          <p className="section-lead mb-4">
             Too often, women are left with unanswered questions about their bodies. They struggle to find clear,
             reliable information on topics like birth control, irregular periods, urinary tract infections, yeast
             infections, PCOS, endometriosis, hormonal imbalances, and more. Many feel dismissed, unheard, or unsure
@@ -60,8 +60,8 @@ const About = () => {
             professional support more accessible and convenient. Whether a woman needs guidance, clarification, or next
             steps, Yarrow connects her to the care she deserves.
           </p> */}
-          <h2 className="text-lg text-muted-foreground mb-3 font-display">Our mission is simple:</h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg text-muted-foreground mb-4">
+          <h2 className="section-lead font-semibold text-foreground mb-3">Our mission is simple:</h2>
+          <ul className="list-disc pl-6 space-y-1 section-lead mb-4">
             <li>Empower women with knowledge</li>
             <li>Provide access to trusted care</li>
             <li>Close the gaps in women’s healthcare—one informed decision at a time</li>
@@ -74,8 +74,8 @@ const About = () => {
       <section className="section-padding bg-muted/50">
         <div className="container-journal">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-display mb-4">Our values</h2>
-            <p className="text-muted-foreground text-lg">
+            <h2 className="section-heading">Our values</h2>
+            <p className="section-lead">
               These core principles guide everything we do
             </p>
           </div>
@@ -91,7 +91,7 @@ const About = () => {
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
+                  <h3 className="section-card-title mb-2">{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </div>
               );

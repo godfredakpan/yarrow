@@ -14,12 +14,13 @@ export function AgePathways() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="section-eyebrow mb-3">What we offer</p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] mb-4 leading-tight">
+          <p className="section-eyebrow">What we offer</p>
+          <h2 className="section-heading">
             Journey Guides that meet you where you are
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Pick a topic that interests you — evidence-based, no age limits. Dive in and see what fits.
+          <p className="section-lead">
+            {/* Pick a topic that interests you — evidence-based, no age limits.  */}
+            Dive in and see what fits.
           </p>
         </div>
 
@@ -68,7 +69,7 @@ export function AgePathways() {
                       }`}
                     />
                   </div>
-                  <h3 className="font-display font-semibold text-lg mb-1">{stage.title}</h3>
+                  <h3 className="section-card-title mb-1">{stage.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-3 leading-relaxed">
                     {stage.description}
                   </p>

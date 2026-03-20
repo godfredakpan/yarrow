@@ -68,7 +68,7 @@ function SidebarDetail({ sidebar }: { sidebar: HomeSidebarContextValue }) {
         <span className="text-sm font-medium text-muted-foreground truncate">Health topics</span>
       </div>
       <div className="pt-6 px-6 pb-6 flex flex-col min-h-0 overflow-y-auto">
-        <h2 className="font-display font-semibold text-xl text-foreground mb-4 pr-2">{topic.title}</h2>
+        <h2 className="section-subheading mb-4 pr-2">{topic.title}</h2>
         <div className="rounded-xl border border-border bg-muted/20 p-4 mb-6">
           {topic.summary
             // Split on sentence endings, but not after "1." style numbers so "**1. How it works**" stays one segment

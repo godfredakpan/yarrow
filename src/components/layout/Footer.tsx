@@ -9,8 +9,8 @@ const footerSections = {
       { name: "About", path: "/about" },
       { name: "Journey Guides", path: "/programs" },
       { name: "Events", path: "/events" },
-      { name: "Info", path: "/info" },
-      { name: "Contact", path: "/contact" },
+      { name: "Health Topics", path: "/info" },
+      // { name: "Contact", path: "/contact" },
     ],
   },
   resources: {
@@ -46,10 +46,10 @@ export function Footer() {
                 height={40}
               />
             </Link>
-            <p className="text-primary-foreground/85 text-sm leading-relaxed max-w-sm mb-6">
+            {/* <p className="text-primary-foreground/85 text-sm leading-relaxed max-w-sm mb-6">
               Healing and care, rooted in nature. Women&apos;s health, for everyone.
             </p>
-            <p className="text-sm text-primary-foreground/70 font-medium">Soft yet powerful. Future forward.</p>
+            <p className="text-sm text-primary-foreground/70 font-medium">Soft yet powerful. Future forward.</p> */}
           </div>
 
           <div>
@@ -107,11 +107,21 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
-                <span>hello@yarrow.org</span>
+                <a
+                  href="mailto:hello@yarrowcare.org"
+                  className="text-primary-foreground/85 hover:text-primary-foreground transition-colors underline-offset-2 hover:underline"
+                >
+                  hello@yarrowcare.org
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
-                <span>+234 800 000 0000</span>
+                <a
+                  href="tel:+2348000000000"
+                  className="text-primary-foreground/85 hover:text-primary-foreground transition-colors underline-offset-2 hover:underline"
+                >
+                  +234 800 000 0000
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />

@@ -61,7 +61,7 @@ const Search = () => {
     <Layout>
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <h1 className="font-display text-2xl md:text-3xl mb-6">Search</h1>
+          <h1 className="section-heading mb-6">Search</h1>
 
           {/* Prominent search box */}
           <form onSubmit={handleSubmit} className="mb-10">
@@ -129,10 +129,8 @@ const Search = () => {
                     className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:bg-card/80 hover:shadow-md"
                   >
                     <div className="min-w-0 flex-1">
-                      <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                        {item.category}
-                      </span>
-                      <h2 className="font-display font-semibold text-lg mt-1.5">
+                      <span className="section-eyebrow !mb-0 block">{item.category}</span>
+                      <h2 className="section-card-title mt-1.5">
                         {item.title}
                       </h2>
                       <p className="text-sm text-muted-foreground mt-1 line-clamp-2">

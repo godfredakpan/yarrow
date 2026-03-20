@@ -23,9 +23,9 @@ export function DidYouKnow() {
           }`}
         >
           <div>
-            <p className="section-eyebrow mb-2">Learn something new</p>
-            <h2 className="font-display text-3xl md:text-4xl mb-2">Did you know?</h2>
-            <p className="text-muted-foreground text-lg max-w-xl">
+            <p className="section-eyebrow">Learn something new</p>
+            <h2 className="section-heading">Did you know?</h2>
+            <p className="section-lead max-w-xl">
               Bite-sized facts to help you understand your health — swipe through and get curious.
             </p>
           </div>
