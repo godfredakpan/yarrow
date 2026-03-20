@@ -19,7 +19,7 @@ import { PageBanner } from "@/components/layout/PageBanner";
 import * as api from "@/lib/api";
 import { images } from "@/lib/images";
 
-const WHATSAPP_NUMBER = "1234567890";
+const WHATSAPP_NUMBER = "2349164176862";
 
 type ContactLocationState = { eventId?: number; eventTitle?: string } | null;
 
@@ -214,8 +214,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Phone</p>
-                    <a href="tel:+2348000000000" className="text-muted-foreground hover:text-primary">
-                      +234 800 000 0000
+                    <a href="tel:+2349164176862" className="text-muted-foreground hover:text-primary">
+                      +234 916 417 6862
                     </a>
                   </div>
                 </div>
@@ -296,7 +296,7 @@ const Contact = () => {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+234 800 000 0000"
+                        placeholder="+234 916 417 6862"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       />

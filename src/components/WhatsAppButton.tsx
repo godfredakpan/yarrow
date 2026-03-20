@@ -1,6 +1,6 @@
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
-const WHATSAPP_NUMBER = "1234567890"; // Replace with actual number
+const WHATSAPP_NUMBER = "2349164176862";
 
 export function WhatsAppButton() {
   const handleClick = () => {
