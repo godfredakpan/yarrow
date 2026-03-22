@@ -49,7 +49,31 @@ function renderInlineBold(text: string) {
   );
 }
 
-/** Simple render: paragraphs, **bold**, and • bullet lists */
+type BulletTreeItem = { text: string; children: string[] };
+
+/** Top-level `• ` lines; following `  • ` lines nest under the previous top-level item */
+function parseBulletTree(listLines: string[]): BulletTreeItem[] {
+  const items: BulletTreeItem[] = [];
+  let i = 0;
+  while (i < listLines.length) {
+    const line = listLines[i];
+    if (/^•\s+/.test(line)) {
+      const text = line.replace(/^•\s+/, "").trim();
+      const children: string[] = [];
+      i++;
+      while (i < listLines.length && /^  •\s+/.test(listLines[i])) {
+        children.push(listLines[i].replace(/^  •\s+/, "").trim());
+        i++;
+      }
+      items.push({ text, children });
+    } else {
+      i++;
+    }
+  }
+  return items;
+}
+
+/** Simple render: paragraphs, **bold**, and • bullet lists (optional `  • ` sub-lists) */
 function TopicContent({ content }: { content: string }) {
   const normalizedContent = normalizeAsterisks(content);
   const blocks = normalizedContent.trim().split(/\n\n+/);
@@ -66,17 +90,26 @@ function TopicContent({ content }: { content: string }) {
           );
         }
         const lines = trimmed.split("\n");
-        const bulletStart = lines.findIndex((line) => /^\s*•\s+/.test(line));
+        const bulletStart = lines.findIndex((line) => /^•\s+/.test(line));
         if (bulletStart >= 0) {
           const introLines = lines.slice(0, bulletStart).filter((l) => l.trim());
           const intro = introLines.join(" ").trim();
-          const listItems = lines.slice(bulletStart).filter((line) => /^\s*•\s+/.test(line));
+          const tree = parseBulletTree(lines.slice(bulletStart));
           return (
             <div key={i} className="mb-4">
               {intro ? <p className="mb-2">{renderInlineBold(intro)}</p> : null}
               <ul className="list-disc pl-6 space-y-1">
-                {listItems.map((line, j) => (
-                  <li key={j}>{renderInlineBold(line.replace(/^\s*•\s*/, "").trim())}</li>
+                {tree.map((item, j) => (
+                  <li key={j}>
+                    {renderInlineBold(item.text)}
+                    {item.children.length > 0 ? (
+                      <ul className="list-disc pl-5 mt-1.5 mb-0 space-y-1">
+                        {item.children.map((child, k) => (
+                          <li key={k}>{renderInlineBold(child)}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </li>
                 ))}
               </ul>
             </div>

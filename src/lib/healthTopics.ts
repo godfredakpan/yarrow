@@ -75,10 +75,10 @@ There are two main types of menstrual cramps:
 
 **Secondary Dysmenorrhea**
 • Caused by an underlying medical condition, such as:
-  Endometriosis
-  Uterine fibroids
-  Polycystic Ovary Syndrome (PCOS)
-  Pelvic inflammatory disease (PID)
+  • Endometriosis
+  • Uterine fibroids
+  • Polycystic Ovary Syndrome (PCOS)
+  • Pelvic inflammatory disease (PID)
 • Pain may worsen over time and last longer than a typical period
 
 **Symptoms of Menstrual Cramps**

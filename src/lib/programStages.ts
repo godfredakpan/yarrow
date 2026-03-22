@@ -32,7 +32,7 @@ export const programStages: ProgramStage[] = [
     title: "Puberty & periods",
     extraIcons: [Droplets, Users, Sparkles],
     description:
-      "Understanding your body, menstrual health, and first steps. Resources on puberty, periods, contraception basics, and building healthy habits.",
+      "Understanding your body, menstrual health, and first steps. Resources on puberty.",
     descriptionLong:
       "Whether you’re new to periods or want clear, reliable information, this programme covers the foundations: puberty and body changes, menstrual health and hygiene, contraception basics, and tips for staying well and confident.",
     image: `${IMG}/teenimages.jpeg`,
@@ -51,7 +51,7 @@ export const programStages: ProgramStage[] = [
     id: "reproductive",
     title: "Reproductive health",
     description:
-      "Family planning, and managing conditions like PCOS or endometriosis. Compare contraceptive options and preconception health.",
+      "Family planning, and managing conditions like PCOS or endometriosis.",
     descriptionLong:
       "Focused on reproductive health for anyone who wants it: family planning, managing conditions like PCOS and endometriosis, comparing contraceptive options, vaginal health, managing UTIs, and preconception health. No age limits — just evidence-based support.",
     image: `${IMG}/youngwomen.jpeg`,
@@ -71,7 +71,7 @@ export const programStages: ProgramStage[] = [
     title: "Hormonal changes & perimenopause",
     extraIcons: [ThermometerSun, Brain, Stethoscope],
     description:
-      "Understanding and managing hormonal changes, hot flashes, mood, sleep, and perimenopause. HRT, lifestyle, and community support.",
+      "Understanding and managing hormonal changes, hot flashes, mood, sleep, and perimenopause.",
     descriptionLong:
       "Hormonal changes can affect anyone. This programme covers perimenopause and menopause: understanding the changes, managing hot flashes and night sweats, mood and sleep, bone health, HRT and alternatives, and lifestyle support.",
     image: `${IMG}/perimenopause.jpeg`,
@@ -91,7 +91,7 @@ export const programStages: ProgramStage[] = [
     title: "Long-term wellness",
     extraIcons: [UsersRound],
     description:
-      "Bone health, heart health, cancer screening, and staying active. Resources for vitality and community support.",
+      "Bone health, heart health, cancer screening, and staying active. Resources for vitality.",
     descriptionLong:
       "Staying strong and healthy over the long term. This programme focuses on bone health and osteoporosis prevention, heart health, cancer screening guidelines, staying active and energised, and community and peer support — for everyone.",
     image: `${IMG}/elderly.jpg`,

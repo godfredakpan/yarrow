@@ -37,14 +37,17 @@ export function Footer() {
       <div className="container-journal py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-3 mb-6">
+            <Link to="/" className="inline-flex flex-col items-start gap-1 mb-6">
               <img
                 src="/assets/FullLogo/SVG/YarrowLogo.svg"
                 alt="Yarrow"
-                className="h-9 w-auto"
-                width={140}
-                height={40}
+                className="h-12 w-auto"
+                width={240}
+                height={72}
               />
+              <span className="text-xs sm:text-sm leading-tight tracking-wide text-primary-foreground/75 font-medium uppercase">
+                Women&apos;s health, your way
+              </span>
             </Link>
             {/* <p className="text-primary-foreground/85 text-sm leading-relaxed max-w-sm mb-6">
               Healing and care, rooted in nature. Women&apos;s health, for everyone.
@@ -53,7 +56,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-primary-foreground mb-4">
+            <h4 className="font-display font-semibold text-base uppercase tracking-wider text-primary-foreground mb-4">
               {footerSections.explore.title}
             </h4>
             <ul className="space-y-3">
@@ -61,7 +64,7 @@ export function Footer() {
                 <li key={link.path + link.name}>
                   <Link
                     to={link.path}
-                    className="text-sm text-primary-foreground/85 hover:text-primary-foreground transition-colors"
+                    className="text-base text-primary-foreground/85 hover:text-primary-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -71,7 +74,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-primary-foreground mb-4">
+            <h4 className="font-display font-semibold text-base uppercase tracking-wider text-primary-foreground mb-4">
               {footerSections.resources.title}
             </h4>
             <ul className="space-y-3">
@@ -79,7 +82,7 @@ export function Footer() {
                 <li key={link.path + link.name}>
                   <Link
                     to={link.path}
-                    className="text-sm text-primary-foreground/85 hover:text-primary-foreground transition-colors"
+                    className="text-base text-primary-foreground/85 hover:text-primary-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -89,7 +92,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-primary-foreground mb-4">
+            <h4 className="font-display font-semibold text-base uppercase tracking-wider text-primary-foreground mb-4">
               {footerSections.connect.title}
             </h4>
             <ul className="space-y-3">
@@ -97,16 +100,16 @@ export function Footer() {
                 <li key={link.path + link.name}>
                   <Link
                     to={link.path}
-                    className="text-sm text-primary-foreground/85 hover:text-primary-foreground transition-colors"
+                    className="text-base text-primary-foreground/85 hover:text-primary-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
+            <ul className="mt-4 space-y-3 text-base text-primary-foreground/85">
               <li className="flex items-start gap-3">
-                <Mail className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
+                <Mail className="h-5 w-5 mt-0.5 shrink-0 opacity-80" />
                 <a
                   href="mailto:hello@yarrowcare.org"
                   className="text-primary-foreground/85 hover:text-primary-foreground transition-colors underline-offset-2 hover:underline"
@@ -115,7 +118,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
+                <Phone className="h-5 w-5 mt-0.5 shrink-0 opacity-80" />
                 <a
                   href="tel:+2349164176862"
                   className="text-primary-foreground/85 hover:text-primary-foreground transition-colors underline-offset-2 hover:underline"
@@ -124,7 +127,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0 opacity-80" />
+                <MapPin className="h-5 w-5 mt-0.5 shrink-0 opacity-80" />
                 <span>Abuja, Nigeria</span>
               </li>
             </ul>
@@ -132,10 +135,10 @@ export function Footer() {
         </div>
 
         <div className="mt-14 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/70">
+          <p className="text-base text-primary-foreground/70">
             © {new Date().getFullYear()} Yarrow. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-sm text-primary-foreground/70">
+          <div className="flex items-center gap-6 text-base text-primary-foreground/70">
             <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
               Privacy
             </Link>

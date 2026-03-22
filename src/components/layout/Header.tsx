@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Search, BookOpen } from "lucide-react";
 import { useHomeSidebar } from "@/contexts/HomeSidebarContext";
 import { Button } from "@/components/ui/button";
@@ -7,11 +7,11 @@ import { Input } from "@/components/ui/input";
 
 const navLinks: { name: string; path: string }[] = [
   // { name: "Home", path: "/" },
-  // { name: "About", path: "/about" },
-  // { name: "Journey Guides", path: "/programs" },
-  // { name: "Events", path: "/events" },
-  // { name: "Info", path: "/info/what-is-a-period" },
-  // { name: "Contact", path: "/contact" },
+  { name: "About", path: "/about" },
+  { name: "Journey Guides", path: "/programs" },
+  { name: "Events", path: "/events" },
+  { name: "Info", path: "/info/what-is-a-period" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export function Header() {
@@ -22,10 +22,10 @@ export function Header() {
   const searchPanelRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const homeSidebar = useHomeSidebar();
-  // const location = useLocation();
-  // const isHome = location.pathname === "/";
-  // const isActive = (path: string) =>
-  //   location.pathname === path || (path.startsWith("/info") && location.pathname.startsWith("/info"));
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const isActive = (path: string) =>
+    location.pathname === path || (path.startsWith("/info") && location.pathname.startsWith("/info"));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -69,28 +69,28 @@ export function Header() {
       }`}
     >
       <div className="container-journal">
-        <div className="flex items-center justify-between min-h-16 md:min-h-[4.5rem] py-1.5 md:py-2">
-          <Link to="/" className="flex flex-col items-start gap-0.5 shrink-0">
+        <div className="flex items-center justify-between min-h-[4.25rem] md:min-h-[5rem] py-2 md:py-2.5">
+          <Link to="/" className="flex flex-col items-start gap-1 shrink-0">
             <img
               src="/assets/FullLogo/SVG/YarrowLogo.svg"
               alt="Yarrow"
-              className="h-9 w-auto sm:h-10"
-              width={140}
-              height={40}
+              className="h-12 w-auto"
+              width={240}
+              height={72}
             />
-            <span className="text-[0.625rem] sm:text-[0.6875rem] leading-tight tracking-wide text-muted-foreground font-medium uppercase">
+            <span className="text-xs sm:text-sm leading-tight tracking-wide text-muted-foreground font-medium uppercase">
               Women&apos;s health, your way
             </span>
           </Link>
 
-          {/* Primary nav — uncomment navLinks entries above and isActive/location to restore
+          {/* Primary nav — uncomment navLinks entries above and isActive/location to restore */}
           <div className="hidden lg:flex items-center gap-1">
             <nav className="flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                className={`px-4 py-2.5 text-base font-medium rounded-md transition-colors ${
                   isActive(link.path)
                     ? "text-primary bg-primary/5"
                     : "text-foreground/80 hover:text-foreground hover:bg-muted/80"
@@ -101,7 +101,7 @@ export function Header() {
             ))}
           </nav>
           </div>
-          */}
+         
 
           <div className="hidden lg:flex items-center gap-2">
             <div className="relative" ref={searchPanelRef}>
@@ -239,18 +239,18 @@ export function Header() {
               </div>
             </form>
             <nav className="flex flex-col gap-0.5">
-              {/* {navLinks.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-4 py-3.5 rounded-md text-base font-medium transition-colors ${
                     isActive(link.path) ? "bg-primary/10 text-primary" : "hover:bg-muted text-foreground/90"
                   }`}
                 >
                   {link.name}
                 </Link>
-              ))} */}
+              ))}
               <div className="px-4 pt-4 mt-2 border-t border-border">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90">
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
