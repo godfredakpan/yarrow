@@ -62,20 +62,23 @@ export function DidYouKnow() {
               }}
               className="flex w-full max-w-full flex-col px-0 sm:px-2"
             >
-              <CarouselContent className="-ml-2 sm:-ml-4">
+              <CarouselContent className="-ml-2 sm:-ml-4 items-stretch">
                 {didYouKnowFacts.map((fact, i) => (
-                  <CarouselItem key={i} className="basis-full sm:basis-full md:basis-1/2 h-full pl-2 sm:pl-4">
+                  <CarouselItem
+                    key={i}
+                    className="basis-full sm:basis-full md:basis-1/2 flex flex-col self-stretch pl-2 sm:pl-4"
+                  >
                     <div
-                      className={`bg-background rounded-lg p-4 sm:p-6 md:p-7 border border-border transition-all duration-300 hover:shadow-lg hover:shadow-foreground/[0.04] hover:border-primary/20 h-full min-h-[160px] sm:min-h-[180px] flex ${
+                      className={`bg-background rounded-lg p-4 sm:p-6 md:p-7 border border-border transition-all duration-300 hover:shadow-lg hover:shadow-foreground/[0.04] hover:border-primary/20 flex h-full flex-col ${
                         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                       }`}
                       style={isInView ? { transitionDelay: `${i * 80}ms` } : undefined}
                     >
-                      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <span className="shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <div className="flex flex-1 flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 sm:h-11 sm:w-11">
                           <Lightbulb className="h-5 w-5 text-primary" />
                         </span>
-                        <p className="text-foreground leading-relaxed sm:pt-1 font-medium text-sm sm:text-[0.9375rem]">
+                        <p className="text-sm font-medium leading-relaxed text-foreground sm:min-w-0 sm:flex-1 sm:pt-1 sm:text-[0.9375rem]">
                           {fact}
                         </p>
                       </div>

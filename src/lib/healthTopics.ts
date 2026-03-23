@@ -51,7 +51,9 @@ It may look like a lot of blood, but most girls only lose a few tablespoons of b
 
 Periods are a natural and healthy part of life. They should not stop you from having fun, going to school, or enjoying everyday activities.
 
-If you have questions about your period, talk to a doctor, nurse, parent, or trusted family member. You can also send questions to us at hello@yarrowcare.org.`;
+If you have questions about your period, talk to a doctor, nurse, parent, or trusted family member.
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Menstrual Cramps (from Menstrual Cramps.pdf) ───────────────────────────
 const menstrualCrampsFull = `**Menstrual cramps**, also called dysmenorrhea, are throbbing or cramping pains in the lower abdomen that often occur just before or during a menstrual period. They may also be accompanied by lower back pain, nausea, headaches, or fatigue. Many girls and women experience menstrual cramps at some point in their lives.
@@ -78,7 +80,7 @@ There are two main types of menstrual cramps:
   • Endometriosis
   • Uterine fibroids
   • Polycystic Ovary Syndrome (PCOS)
-  • Pelvic inflammatory disease (PID)
+  • Pelvic Inflammatory Disease (PID)
 • Pain may worsen over time and last longer than a typical period
 
 **Symptoms of Menstrual Cramps**
@@ -118,7 +120,7 @@ If your pain is caused by primary dysmenorrhea and requires medical treatment, h
 
 Always consult a healthcare provider to determine the best treatment option for you.
 
-If you have questions or would like more information, you can contact us at hello@yarrowcare.org.`;
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Menstrual Cups and Discs (from Menstrual Cups and Discs.pdf) ─────────────
 const menstrualCupsAndDiscsFull = `
@@ -167,7 +169,9 @@ A healthcare provider can help answer questions about:
 
 Menstrual cups and discs are just one of many healthy period care options. The best choice is the one that feels safe, comfortable, and practical for each individual.
 
-For questions or support, contact a trusted healthcare provider or email hello@yarrowcare.org.`;
+For questions or support, contact a trusted healthcare provider.
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── PCOS (from PCOS.pdf) ─────────────────────────────────────────────────────
 const pcosFull = `
@@ -219,7 +223,7 @@ Regular checkins with a doctor can help prevent complications and support overal
 If you think you might have PCOS—or if you have it and want help managing your symptoms—talk with a healthcare professional. 
 You are not alone, and support is available. 
 
-For more answers, you can contact us at hello@yarrowcare.org.`;
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Contraceptives (from Did you know.pdf — Contraceptives section only) ────
 const contraceptivesFull = `
@@ -261,7 +265,9 @@ Emergency contraception can help prevent pregnancy after unprotected sex and wor
 
 **Choosing the Right Method**
 • 
-There is no single "best" birth control option. The right method depends on health needs, lifestyle, comfort, and personal preferences.`;
+There is no single "best" birth control option. The right method depends on health needs, lifestyle, comfort, and personal preferences.
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Menstrual Product Comparison (from Menstrual Product Comparison Chart.pdf) ─
 const comparisonFull = `
@@ -380,9 +386,9 @@ Menstrual Discs: Possibly, depending on comfort.
 
 **12. Key Takeaways**
 
-• All options are safe and effective when used as directed.
-• There is no "best" product—the right choice depends on comfort, lifestyle, flow, and personal preference.
-• Some people use different products at different times (for example, pads at night and tampons or cups during the day).
+• All options are safe and effective when used as directed
+• There is no "best" product—the right choice depends on comfort, lifestyle, flow, and personal preference
+• Some people use different products at different times (for example, pads at night and tampons or cups during the day)
 
 **13. When to Ask for Guidance**
 
@@ -391,7 +397,7 @@ A healthcare provider can help with:
 • Managing leaks or discomfort
 • Understanding safe use for teens or first-time users
 
-For additional questions or support, contact hello@yarrowcare.org.`;
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Douching (from Douching.pdf) ─────────────────────────────────────────────
 const douchingFull = `
@@ -403,7 +409,7 @@ const douchingFull = `
 Despite its popularity, medical professionals strongly advise against douching. It disrupts the natural balance of bacteria in the vagina, which can lead to:
 • Bacterial vaginosis
 • Yeast infections
-• Pelvic inflammatory disease (PID)
+• Pelvic Inflammatory Disease (PID)
 • Problems getting pregnant
 
 A healthy vagina naturally contains both good and harmful bacteria. Maintaining this balance helps keep the vagina acidic and protected from infections and irritation.
@@ -430,9 +436,11 @@ If you are concerned about vaginal odor, talk to a doctor or nurse. Even healthy
 
 **How to keep your vagina clean and healthy**
 
-• Wash only the outside of your vagina (vulva) with warm water when bathing.
-• Some women use mild, unscented soaps, but if you have sensitive skin or a current infection, even mild soap can cause dryness and irritation.
-• Avoid scented tampons, pads, powders, wipes, and sprays. These products may increase your chances of vaginal irritation or infection.`;
+• Wash only the outside of your vagina (vulva) with warm water when bathing
+• Some women use mild, unscented soaps, but if you have sensitive skin or a current infection, even mild soap can cause dryness and irritation
+• Avoid scented tampons, pads, powders, wipes, and sprays. These products may increase your chances of vaginal irritation or infection
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Birth control: Breaking the myth (from Birth Control - Clearing the Myth.pdf) ─
 const birthControlMythFull = `
@@ -453,9 +461,9 @@ For most women, fertility returns to their normal baseline after discontinuing b
 
 Another common belief is that birth control inevitably leads to significant weight gain.
 While some women may experience mild weight changes, this is not universal.
-• Certain formulations—particularly older, higher-dose pills or specific hormonal methods—may cause fluid retention or increased appetite.
-• Many modern low-dose pills have minimal impact on weight.
-• If weight gain does occur, switching to a different formulation can often resolve the issue.
+• Certain formulations—particularly older, higher-dose pills or specific hormonal methods—may cause fluid retention or increased appetite
+• Many modern low-dose pills have minimal impact on weight
+• If weight gain does occur, switching to a different formulation can often resolve the issue
 
 Not all birth control methods affect the body in the same way, and there are many options available.
 
@@ -488,7 +496,9 @@ Birth control does not cause permanent infertility. Once discontinued, the body 
 
 Additionally, birth control is not solely about preventing pregnancy. It is a valuable medical tool used to regulate hormones, manage painful or heavy periods, treat acne, and address other hormone-related symptoms.
 
-Every woman's body is different. The best approach is to discuss options with a healthcare provider to determine which method aligns with personal health goals, comfort level, and lifestyle.`;
+Every woman's body is different. The best approach is to discuss options with a healthcare provider to determine which method aligns with personal health goals, comfort level, and lifestyle.
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Understanding Yeast Infections (from Understanding Yeast Infections.pdf) ────
 const yeastInfectionFull = `
@@ -502,11 +512,11 @@ A yeast infection happens when too much yeast, grows in the vagina. Yeast is nor
 **What Causes the Balance to Change?**
 
 Several everyday things can trigger a yeast infection:
-• Antibiotics – these kill both good and bad bacteria, giving yeast room to grow.
-• Tight or non-breathable clothing – moisture and warmth encourage yeast growth.
-• Hormone changes – such as pregnancy, menstrual cycles, or birth control.
-• High blood sugar – especially for people with diabetes.
-• Scented products – sprays, soaps, or douches can irritate the vagina and disrupt balance.
+• Antibiotics – these kill both good and bad bacteria, giving yeast room to grow
+• Tight or non-breathable clothing – moisture and warmth encourage yeast growth
+• Hormone changes – such as pregnancy, menstrual cycles, or birth control
+• High blood sugar – especially for people with diabetes
+• Scented products – sprays, soaps, or douches can irritate the vagina and disrupt balance
 
 These triggers don't cause yeast infections every time, but they can make them more likely.
 
@@ -539,17 +549,17 @@ It's a good idea to talk to a doctor or nurse if:
 **Tips for Preventing Yeast Infections**
 
 You may not always be able to prevent a yeast infection, but a few healthy habits can reduce your risk:
-• Wear cotton underwear to keep the area dry.
-• Change out of wet clothing, like swimsuits or gym clothes, quickly.
-• Avoid scented soaps, wipes, and douches.
-• Keep the vaginal area clean using warm water only.
-• Manage blood sugar levels if you have diabetes.
+• Wear cotton underwear to keep the area dry
+• Change out of wet clothing, like swimsuits or gym clothes, quickly
+• Avoid scented soaps, wipes, and douches
+• Keep the vaginal area clean using warm water only
+• Manage blood sugar levels if you have diabetes
 
 **Final Thoughts**
 
 Yeast infections are common, treatable, and nothing to be embarrassed about. Understanding how they happen, recognizing the symptoms, and knowing when to seek help empowers you to take care of your body with confidence. With the right knowledge and care, most people can manage yeast infections easily and prevent them from coming back.
 
-For more information, contact hello@yarrowcare.org`;
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Healthy Aging for Women Over 50 (from Healthy Aging for Women Over 50.pdf) ─
 const healthyAgingFull = `
@@ -567,7 +577,9 @@ Your bones and heart deserve a little extra love around this time of life. Getti
 
 And just as important as physical health is your emotional well-being. Staying connected with people who lift you up, spending time on hobbies that bring you joy, and finding calm through deep breathing, prayer, meditation, or quiet moments can do wonders. Sleep also becomes even more essential—good rest helps regulate mood, energy, and overall health.
 
-At the end of the day, healthy aging isn't about big, dramatic changes. It's about small, meaningful choices you make over time. By tuning in to what your body needs, staying curious about your health, and giving yourself grace along the way, you can continue to feel vibrant, confident, and grounded well beyond your 50s. If you ever have questions about what's right for you personally, your healthcare provider is always the best partner to help you find the right path forward.`;
+At the end of the day, healthy aging isn't about big, dramatic changes. It's about small, meaningful choices you make over time. By tuning in to what your body needs, staying curious about your health, and giving yourself grace along the way, you can continue to feel vibrant, confident, and grounded well beyond your 50s. If you ever have questions about what's right for you personally, your healthcare provider is always the best partner to help you find the right path forward.
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Hot Flashes and How to Manage Them (from Hot Flashes and How to Manage Them.docx.pdf) ─
 const hotFlashesFull = `
@@ -613,7 +625,7 @@ For those who cannot take hormones, non-hormonal treatments may help. A healthca
 
 Women do not need to suffer in silence. If hot flashes affect sleep, energy, or daily life, medical support is available. A healthcare provider can evaluate symptoms and recommend personalized treatment options.
 
-For questions or more information, please contact hello@yarrowcare.org.`;
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Know Your Bones (from Know Your Bones.docx.pdf) ─────────────────────────
 const knowYourBonesFull = `
@@ -646,7 +658,9 @@ Use this quick checklist to support strong bones every day.
 **Long-Term**
 • Discussed bone health with my doctor
 • Know whether I need a bone density test
-• Reviewed supplements or treatment options`;
+• Reviewed supplements or treatment options
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 // ─── Understanding HPV (from Understanding HPV.docx.pdf) ─────────────────────
 const understandingHpvFull = `
@@ -691,7 +705,9 @@ Maintaining regular healthcare visits and staying informed about personal risk a
 
 HPV is common, but HPV-related cancers are largely preventable through vaccination and routine screening. Understanding the virus—and taking simple preventive steps—can significantly reduce risk and support long-term health.
 
-If you have questions about HPV, vaccination, or screening, speak with your healthcare provider to learn what options are best for you.`;
+If you have questions about HPV, vaccination, or screening, speak with your healthcare provider to learn what options are best for you.
+
+For more information, contact us at hello@yarrowcare.org.`;
 
 export const healthTopics: HealthTopic[] = [
   {

@@ -271,8 +271,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Email</p>
-                    <a href="mailto:hello@yarrow.org" className="text-muted-foreground hover:text-primary">
-                      hello@yarrow.org
+                    <a href="mailto:hello@yarrowcare.org" className="text-muted-foreground hover:text-primary">
+                      hello@yarrowcare.org
                     </a>
                   </div>
                 </div>
@@ -365,7 +365,7 @@ const Contact = () => {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+234 916 417 6862"
+                        placeholder="+234 000 000 0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       />
