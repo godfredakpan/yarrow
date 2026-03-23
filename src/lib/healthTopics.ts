@@ -51,7 +51,7 @@ It may look like a lot of blood, but most girls only lose a few tablespoons of b
 
 Periods are a natural and healthy part of life. They should not stop you from having fun, going to school, or enjoying everyday activities.
 
-If you have questions about your period, talk to a doctor, nurse, parent, or trusted family member. You can also send questions to us at info@yarrowcare.org.`;
+If you have questions about your period, talk to a doctor, nurse, parent, or trusted family member. You can also send questions to us at hello@yarrowcare.org.`;
 
 // ─── Menstrual Cramps (from Menstrual Cramps.pdf) ───────────────────────────
 const menstrualCrampsFull = `**Menstrual cramps**, also called dysmenorrhea, are throbbing or cramping pains in the lower abdomen that often occur just before or during a menstrual period. They may also be accompanied by lower back pain, nausea, headaches, or fatigue. Many girls and women experience menstrual cramps at some point in their lives.
@@ -118,7 +118,7 @@ If your pain is caused by primary dysmenorrhea and requires medical treatment, h
 
 Always consult a healthcare provider to determine the best treatment option for you.
 
-If you have questions or would like more information, you can contact us at info@yarrowcare.org.`;
+If you have questions or would like more information, you can contact us at hello@yarrowcare.org.`;
 
 // ─── Menstrual Cups and Discs (from Menstrual Cups and Discs.pdf) ─────────────
 const menstrualCupsAndDiscsFull = `
@@ -167,7 +167,7 @@ A healthcare provider can help answer questions about:
 
 Menstrual cups and discs are just one of many healthy period care options. The best choice is the one that feels safe, comfortable, and practical for each individual.
 
-For questions or support, contact a trusted healthcare provider or email info@yarrowcare.org.`;
+For questions or support, contact a trusted healthcare provider or email hello@yarrowcare.org.`;
 
 // ─── PCOS (from PCOS.pdf) ─────────────────────────────────────────────────────
 const pcosFull = `
@@ -219,7 +219,7 @@ Regular checkins with a doctor can help prevent complications and support overal
 If you think you might have PCOS—or if you have it and want help managing your symptoms—talk with a healthcare professional. 
 You are not alone, and support is available. 
 
-For more answers, you can contact us at info@yarrowcare.org.`;
+For more answers, you can contact us at hello@yarrowcare.org.`;
 
 // ─── Contraceptives (from Did you know.pdf — Contraceptives section only) ────
 const contraceptivesFull = `
@@ -391,7 +391,7 @@ A healthcare provider can help with:
 • Managing leaks or discomfort
 • Understanding safe use for teens or first-time users
 
-For additional questions or support, contact info@yarrowcare.org.`;
+For additional questions or support, contact hello@yarrowcare.org.`;
 
 // ─── Douching (from Douching.pdf) ─────────────────────────────────────────────
 const douchingFull = `
@@ -549,7 +549,7 @@ You may not always be able to prevent a yeast infection, but a few healthy habit
 
 Yeast infections are common, treatable, and nothing to be embarrassed about. Understanding how they happen, recognizing the symptoms, and knowing when to seek help empowers you to take care of your body with confidence. With the right knowledge and care, most people can manage yeast infections easily and prevent them from coming back.
 
-For more information, contact info@yarrowcare.org`;
+For more information, contact hello@yarrowcare.org`;
 
 // ─── Healthy Aging for Women Over 50 (from Healthy Aging for Women Over 50.pdf) ─
 const healthyAgingFull = `
@@ -613,7 +613,7 @@ For those who cannot take hormones, non-hormonal treatments may help. A healthca
 
 Women do not need to suffer in silence. If hot flashes affect sleep, energy, or daily life, medical support is available. A healthcare provider can evaluate symptoms and recommend personalized treatment options.
 
-For questions or more information, please contact info@yarrowcare.org.`;
+For questions or more information, please contact hello@yarrowcare.org.`;
 
 // ─── Know Your Bones (from Know Your Bones.docx.pdf) ─────────────────────────
 const knowYourBonesFull = `

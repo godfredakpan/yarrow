@@ -17,9 +17,26 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { PageBanner } from "@/components/layout/PageBanner";
 import * as api from "@/lib/api";
+import { sendContactConfirmationEmail } from "@/lib/contactConfirmation";
 import { images } from "@/lib/images";
 
 const WHATSAPP_NUMBER = "2349164176862";
+
+const CONTACT_TOPIC_LABELS: Record<string, string> = {
+  general: "General health questions",
+  menstrual: "Questions about periods",
+  familyplanning: "Family planning",
+  pcos: "PCOS or endometriosis",
+  menopause: "Perimenopause or menopause",
+  mental: "Mental health and wellness",
+  nutrition: "Nutrition and fitness",
+  other: "Other questions",
+};
+
+function contactCategoryLabel(topic: string): string {
+  if (!topic) return "General inquiry";
+  return CONTACT_TOPIC_LABELS[topic] ?? "General inquiry";
+}
 
 type ContactLocationState = { eventId?: number; eventTitle?: string } | null;
 
@@ -37,6 +54,10 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitMeta, setSubmitMeta] = useState<{
+    email: string;
+    confirmationSent: boolean;
+  } | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -66,13 +87,24 @@ const Contact = () => {
     }
     setIsSubmitting(true);
     try {
-      await api.createBooking({
+      const name = formData.name.trim();
+      const email = formData.email.trim();
+      const booking = await api.createBooking({
         event_id: eventId as number,
-        name: formData.name.trim(),
-        email: formData.email.trim(),
+        name,
+        email,
         phone: formData.phone.trim() || undefined,
         notes: formData.message.trim() || undefined,
       });
+      // const confirmationSent = await sendContactConfirmationEmail({
+      //   name,
+      //   email,
+      //   kind: "event",
+      //   caseId: booking.id,
+      //   categoryLabel: eventTitle,
+      //   eventTitle,
+      // });
+      // setSubmitMeta({ email, confirmationSent });
       setIsSubmitted(true);
       toast({
         title: "You're registered!",
@@ -118,13 +150,23 @@ const Contact = () => {
     }
     setIsSubmitting(true);
     try {
-      await api.createContactRequest({
-        name: formData.name.trim(),
-        email: formData.email.trim(),
+      const name = formData.name.trim();
+      const email = formData.email.trim();
+      const contactRes = await api.createContactRequest({
+        name,
+        email,
         phone: formData.phone.trim() || undefined,
         topic: formData.topic || undefined,
         message: formData.message.trim() || undefined,
       });
+      // const confirmationSent = await sendContactConfirmationEmail({
+      //   name,
+      //   email,
+      //   kind: "consultation",
+      //   caseId: contactRes.id,
+      //   categoryLabel: contactCategoryLabel(formData.topic),
+      // });
+      // setSubmitMeta({ email, confirmationSent });
       setIsSubmitted(true);
       toast({
         title: "Request submitted!",
@@ -158,9 +200,31 @@ const Contact = () => {
             </div>
             <h1 className="section-heading">Thank you</h1>
             <p className="section-lead mb-8">
-              {eventIdValid
-                ? `Your registration for ${eventTitle} has been submitted. We'll confirm your spot soon.`
-                : "Your consultation request has been submitted. Our team will contact you within 24-48 hours to schedule your free session."}
+              {eventIdValid ? (
+                <>
+                  Your registration for {eventTitle} has been submitted. We&apos;ll confirm your spot
+                  soon.
+                  {submitMeta?.confirmationSent ? (
+                    <>
+                      {" "}
+                      A confirmation email was sent to{" "}
+                      <span className="font-medium text-foreground">{submitMeta.email}</span>.
+                    </>
+                  ) : null}
+                </>
+              ) : (
+                <>
+                  Your consultation request has been submitted. Our team will contact you within
+                  24-48 hours to schedule your free session.
+                  {submitMeta?.confirmationSent ? (
+                    <>
+                      {" "}
+                      We&apos;ve sent a confirmation email to{" "}
+                      <span className="font-medium text-foreground">{submitMeta.email}</span>.
+                    </>
+                  ) : null}
+                </>
+              )}
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {eventIdValid && (
@@ -168,7 +232,12 @@ const Contact = () => {
                   <Link to="/events">View more events</Link>
                 </Button>
               )}
-              <Button onClick={() => setIsSubmitted(false)}>
+              <Button
+                onClick={() => {
+                  setIsSubmitted(false);
+                  setSubmitMeta(null);
+                }}
+              >
                 {eventIdValid ? "Register for another event" : "Submit another request"}
               </Button>
             </div>
