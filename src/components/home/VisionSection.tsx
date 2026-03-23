@@ -14,7 +14,7 @@ export function VisionSection() {
           {/* <p className="section-eyebrow mb-3">Our vision</p> */}
           <h2 className="section-heading">
             {/* The future we&apos;re building toward */}
-            The future we are trying to create
+            The future we envision
           </h2>
           <p className="section-lead">
             Yarrow envisions a future where every woman has the knowledge, confidence, and support to take control of her
