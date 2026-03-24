@@ -298,9 +298,9 @@ Pads: 3–6 hours.
 
 Tampons: 4–8 hours.
 
-Menstrual Cups: Up to 8–12 hours*.
+Menstrual Cups: Up to 8–12 hours.
 
-Menstrual Discs: Up to 8–12 hours*.
+Menstrual Discs: Up to 8–12 hours.
 
 *Always follow the manufacturer's instructions and empty or change products sooner if flow is heavy.
 
