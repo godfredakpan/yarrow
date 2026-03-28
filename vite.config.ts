@@ -1,3 +1,4 @@
+import { copyFileSync, existsSync } from "node:fs";
 import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -65,6 +66,22 @@ function contactConfirmationDevApi(env: Record<string, string>): Plugin {
   };
 }
 
+/** GitHub Pages & static hosts: unknown paths serve 404.html (copy of SPA shell) */
+function spaFallback404(): Plugin {
+  return {
+    name: "spa-fallback-404",
+    apply: "build",
+    closeBundle() {
+      const dist = path.resolve(process.cwd(), "dist");
+      const indexHtml = path.join(dist, "index.html");
+      const notFoundHtml = path.join(dist, "404.html");
+      if (existsSync(indexHtml)) {
+        copyFileSync(indexHtml, notFoundHtml);
+      }
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
@@ -76,7 +93,7 @@ export default defineConfig(({ mode }) => {
         overlay: false,
       },
     },
-    plugins: [react(), contactConfirmationDevApi(env)],
+    plugins: [react(), contactConfirmationDevApi(env), spaFallback404()],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
